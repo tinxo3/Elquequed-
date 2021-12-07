@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://fonts/dialog.tres" type="DynamicFont" id=1]
-[ext_resource path="res://textures/menu/game_title.png" type="Texture" id=2]
-[ext_resource path="res://textures/menu/bg.png" type="Texture" id=3]
+[ext_resource path="res://fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://textures/menu/background.png" type="Texture" id=2]
+[ext_resource path="res://textures/menu/title.png" type="Texture" id=3]
 [ext_resource path="res://scenes/levels/Menu.gd" type="Script" id=4]
+[ext_resource path="res://textures/menu/controls.png" type="Texture" id=5]
+[ext_resource path="res://textures/menu/quit.png" type="Texture" id=6]
+[ext_resource path="res://textures/menu/continue.png" type="Texture" id=7]
+[ext_resource path="res://textures/menu/new_game.png" type="Texture" id=8]
+[ext_resource path="res://textures/menu/credits.png" type="Texture" id=9]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -22,7 +27,7 @@ initial_level = "res://scenes/levels/Outside.tscn"
 [node name="BG" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
 __meta__ = {
@@ -34,11 +39,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -236.0
-margin_top = -185.634
-margin_right = 237.0
-margin_bottom = -5.63416
-texture = ExtResource( 2 )
+margin_left = -266.843
+margin_top = -220.654
+margin_right = 287.157
+margin_bottom = 9.34589
+texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -50,18 +55,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -57.5
-margin_top = 47.9168
-margin_right = 57.5
-margin_bottom = 96.9168
+margin_left = -162.74
+margin_top = 6.15149
+margin_right = 386.26
+margin_bottom = 158.151
+rect_scale = Vector2( 0.570488, 0.548198 )
 focus_neighbour_left = NodePath("../quit")
 focus_neighbour_top = NodePath("../quit")
 focus_neighbour_right = NodePath("../controls")
 focus_neighbour_bottom = NodePath("../continue")
 custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.364706, 0.364706, 0.364706, 1 )
-text = "New Game"
+icon = ExtResource( 8 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -72,10 +79,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -50.5
-margin_top = 123.626
-margin_right = 50.5
-margin_bottom = 172.626
+margin_left = -157.308
+margin_top = 86.3677
+margin_right = 391.692
+margin_bottom = 238.368
+rect_scale = Vector2( 0.541969, 0.560595 )
 focus_neighbour_left = NodePath("../quit")
 focus_neighbour_top = NodePath("../new_game")
 focus_neighbour_right = NodePath("../controls")
@@ -85,7 +93,7 @@ custom_colors/font_color_disabled = Color( 0.780392, 0.780392, 0.780392, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.364706, 0.364706, 0.364706, 1 )
 disabled = true
-text = "Continue"
+icon = ExtResource( 7 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -96,16 +104,17 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -114.361
-margin_top = 234.378
-margin_right = -13.3615
-margin_bottom = 283.378
+margin_left = -208.565
+margin_top = 244.99
+margin_right = 347.435
+margin_bottom = 362.99
+rect_scale = Vector2( 0.359855, 0.368872 )
 focus_neighbour_left = NodePath("../quit")
 focus_neighbour_top = NodePath("../continue")
 focus_neighbour_right = NodePath("../quit")
 focus_neighbour_bottom = NodePath("../new_game")
 custom_fonts/font = ExtResource( 1 )
-text = "Controls"
+icon = ExtResource( 5 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -114,21 +123,36 @@ __meta__ = {
 [node name="quit" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 12.9543
-margin_top = -69.3568
-margin_right = 113.954
-margin_bottom = -20.3568
+margin_left = 4.9543
+margin_top = -53.3568
+margin_right = 296.954
+margin_bottom = 69.6432
+rect_scale = Vector2( 0.365071, 0.34837 )
 focus_neighbour_left = NodePath("../controls")
 focus_neighbour_top = NodePath("../continue")
 focus_neighbour_right = NodePath("../controls")
 focus_neighbour_bottom = NodePath("../new_game")
 custom_fonts/font = ExtResource( 1 )
-text = "Quit"
+icon = ExtResource( 6 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="credits" type="Button" parent="."]
+margin_left = 1.00961
+margin_top = 6.53891
+margin_right = 430.01
+margin_bottom = 118.539
+rect_scale = Vector2( 0.400233, 0.332105 )
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]

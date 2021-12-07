@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/levels/credits.gd" type="Script" id=1]
+[ext_resource path="res://textures/menu/CREDITS NAMES.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "creditos"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/path = NodePath("ColorRect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.247059, 0.388235, 0.247059, 1 ), Color( 0.352941, 0.913725, 0.12549, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.5859, 3.5, 4.5, 5.7, 6.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2.0315, 567.333 ), Vector2( 1.78186, 604.029 ), Vector2( 3.78186, 310.029 ), Vector2( 1.78186, 162.029 ), Vector2( -0.21814, 56.0293 ), Vector2( -0.21814, 2.0293 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.352941, 0.913725, 0.12549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -0.21814
+margin_top = 2.0293
+margin_right = 1023.78
+margin_bottom = 602.049
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Añadir Música" type="AudioStreamPlayer" parent="."]
+
+[node name="credit" type="AnimationPlayer" parent="."]
+autoplay = "creditos"
+anims/creditos = SubResource( 1 )
+
+[connection signal="animation_finished" from="credit" to="." method="_on_AnimationPlayer_animation_finished"]

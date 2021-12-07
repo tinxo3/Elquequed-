@@ -44,3 +44,9 @@ func _on_quit_pressed():
 func _on_controls_pressed():
 	get_tree().change_scene("res://scenes/levels/Controls.tscn")
 	pass # Replace with function body.
+
+
+func _on_credits_pressed():
+	get_tree().change_scene("res://scenes/levels/credits.tscn")
+	
+	pass # Replace with function body.
