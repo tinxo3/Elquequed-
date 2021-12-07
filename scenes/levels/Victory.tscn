@@ -1,8 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://music/you win!.webm" type="VideoStream" id=1]
+[ext_resource path="res://scenes/levels/Victory.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -10,3 +14,12 @@ __meta__ = {
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Añadir Audio" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
