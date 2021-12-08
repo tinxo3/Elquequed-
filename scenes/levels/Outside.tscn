@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=2]
@@ -15,15 +15,264 @@
 [ext_resource path="res://scenes/characters/Npc.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/misc/Quest.tscn" type="PackedScene" id=14]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 70.2834, 110.451 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2771, 26.7571 )
+
 [node name="Outside" type="Node"]
 
-[node name="puddle_big" type="Sprite" parent="."]
-position = Vector2( 661.445, 950.947 )
-texture = ExtResource( 10 )
+[node name="staticbody" type="StaticBody2D" parent="."]
+position = Vector2( -275.896, -28.5408 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="staticbody"]
+position = Vector2( -574.205, 1863.47 )
+scale = Vector2( 1, 16.28 )
+shape = SubResource( 1 )
+
+[node name="staticbody2" type="StaticBody2D" parent="."]
+position = Vector2( 4379.31, -445.625 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="staticbody2"]
+position = Vector2( -574.205, 1863.47 )
+scale = Vector2( 1, 16.28 )
+shape = SubResource( 1 )
 
 [node name="puddle_small" type="Sprite" parent="."]
-position = Vector2( 1329.08, 687.921 )
-scale = Vector2( 0.995735, 0.995735 )
+position = Vector2( 3832.24, 2888.44 )
+rotation = 1.5708
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small3" type="Sprite" parent="."]
+position = Vector2( 3832.24, 2543.37 )
+rotation = 1.5708
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small4" type="Sprite" parent="."]
+position = Vector2( 3832.24, 2192.64 )
+rotation = 1.5708
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small5" type="Sprite" parent="."]
+position = Vector2( 3832.24, 1870.2 )
+rotation = 1.5708
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small6" type="Sprite" parent="."]
+position = Vector2( 3826.58, 880.255 )
+rotation = 1.5708
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small8" type="Sprite" parent="."]
+position = Vector2( 2446.31, -53.1263 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small9" type="Sprite" parent="."]
+position = Vector2( 2129.53, -58.7832 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small10" type="Sprite" parent="."]
+position = Vector2( 1795.77, -53.1263 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small11" type="Sprite" parent="."]
+position = Vector2( 1450.7, -53.1263 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small12" type="Sprite" parent="."]
+position = Vector2( 1083.01, -47.4695 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small13" type="Sprite" parent="."]
+position = Vector2( 741.778, -60.939 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small14" type="Sprite" parent="."]
+position = Vector2( 427.489, -60.939 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small15" type="Sprite" parent="."]
+position = Vector2( 117.689, -65.4289 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small16" type="Sprite" parent="."]
+position = Vector2( -187.621, -60.9391 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small17" type="Sprite" parent="."]
+position = Vector2( -537.829, -60.9391 )
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small19" type="Sprite" parent="."]
+position = Vector2( -879.057, 226.411 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small20" type="Sprite" parent="."]
+position = Vector2( -879.057, 549.68 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small21" type="Sprite" parent="."]
+position = Vector2( -879.057, 895.399 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small22" type="Sprite" parent="."]
+position = Vector2( -883.547, 1200.71 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small23" type="Sprite" parent="."]
+position = Vector2( -879.057, 1497.04 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small24" type="Sprite" parent="."]
+position = Vector2( -879.057, 1842.76 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small25" type="Sprite" parent="."]
+position = Vector2( -883.547, 2197.45 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small26" type="Sprite" parent="."]
+position = Vector2( -879.057, 2534.19 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small27" type="Sprite" parent="."]
+position = Vector2( -883.547, 2866.44 )
+rotation = 4.71239
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small28" type="Sprite" parent="."]
+position = Vector2( -856.608, 3122.36 )
+rotation = 3.86134
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small29" type="Sprite" parent="."]
+position = Vector2( -600.687, 3140.32 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small30" type="Sprite" parent="."]
+position = Vector2( -281.908, 3140.32 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small31" type="Sprite" parent="."]
+position = Vector2( 36.8713, 3140.32 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small32" type="Sprite" parent="."]
+position = Vector2( 364.63, 3131.34 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small33" type="Sprite" parent="."]
+position = Vector2( 701.369, 3135.83 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small34" type="Sprite" parent="."]
+position = Vector2( 1011.17, 3140.32 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small35" type="Sprite" parent="."]
+position = Vector2( 1356.89, 3135.83 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small36" type="Sprite" parent="."]
+position = Vector2( 1675.67, 3131.34 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small37" type="Sprite" parent="."]
+position = Vector2( 1994.45, 3135.83 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small38" type="Sprite" parent="."]
+position = Vector2( 2353.63, 3135.83 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small39" type="Sprite" parent="."]
+position = Vector2( 2685.88, 3140.32 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small40" type="Sprite" parent="."]
+position = Vector2( 3027.11, 3144.81 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small41" type="Sprite" parent="."]
+position = Vector2( 3323.44, 3144.81 )
+rotation = 3.13282
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small42" type="Sprite" parent="."]
+position = Vector2( 3651.2, 3140.32 )
+rotation = 2.97899
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small18" type="Sprite" parent="."]
+position = Vector2( -879.057, -2.57102 )
+rotation = -0.479578
+scale = Vector2( 0.964766, 0.903586 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small7" type="Sprite" parent="."]
+position = Vector2( 3736.07, -41.8126 )
+rotation = 0.311595
+scale = Vector2( 0.964766, 0.929766 )
 texture = ExtResource( 11 )
 
 [node name="puddle_small2" type="Sprite" parent="."]
@@ -32,7 +281,7 @@ scale = Vector2( 0.995735, 0.995735 )
 texture = ExtResource( 11 )
 
 [node name="puddle_big2" type="Sprite" parent="."]
-position = Vector2( 1782.78, 1096.72 )
+position = Vector2( 1846.85, 1086.04 )
 scale = Vector2( 1.97507, 1.97507 )
 texture = ExtResource( 10 )
 
@@ -40,7 +289,7 @@ texture = ExtResource( 10 )
 position = Vector2( 208.024, -128.355 )
 
 [node name="Jorgito" parent="level" instance=ExtResource( 13 )]
-position = Vector2( 2062.51, 2957.82 )
+position = Vector2( 3139.15, 2798.42 )
 character_name = "Jorgito"
 
 [node name="Quest" parent="level/Jorgito" instance=ExtResource( 14 )]
@@ -50,32 +299,40 @@ initial_text = "TLDR; bring me 3 Generic Items"
 pending_text = "You forgot? I want 3 Generic Items"
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
-position = Vector2( 1509.86, 2579.34 )
+position = Vector2( 2611.87, 2881.95 )
 
 [node name="house" parent="level" instance=ExtResource( 5 )]
-position = Vector2( 908.151, 406.509 )
+position = Vector2( 3054.12, 406.509 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
-[node name="house_outside" type="Position2D" parent="level/house" groups=["spawnpoints"]]
+[node name="house_outside" type="Position2D" parent="level/house" groups=[
+"spawnpoints",
+]]
 position = Vector2( -2.12201, 173.199 )
 
 [node name="flower" parent="level" instance=ExtResource( 7 )]
-position = Vector2( -495.829, 1186.5 )
-
-[node name="flower2" parent="level" instance=ExtResource( 7 )]
-position = Vector2( 2000.14, 283.939 )
+position = Vector2( -595.056, 345.159 )
 
 [node name="flower3" parent="level" instance=ExtResource( 7 )]
-position = Vector2( 3047.55, 841.074 )
+position = Vector2( 55.4827, 1340.77 )
+
+[node name="flower4" parent="level" instance=ExtResource( 7 )]
+position = Vector2( -363.125, 2930.34 )
+
+[node name="flower5" parent="level" instance=ExtResource( 7 )]
+position = Vector2( 3228.98, 2449.51 )
+
+[node name="flower2" parent="level" instance=ExtResource( 7 )]
+position = Vector2( 1744.51, 485.754 )
 
 [node name="grass" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1454.14, 1621.06 )
+position = Vector2( 3309.16, 618.711 )
 
 [node name="grass2" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1610.14, 1777.06 )
+position = Vector2( 2832.8, 498.898 )
 
 [node name="grass3" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1721.57, 2011.06 )
+position = Vector2( 3305.85, 482.106 )
 
 [node name="grass4" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 1844.14, 1598.78 )
@@ -84,31 +341,64 @@ position = Vector2( 1844.14, 1598.78 )
 position = Vector2( 1977.85, 1821.63 )
 
 [node name="grass6" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2278.7, 1520.78 )
+position = Vector2( 2825.28, 615.975 )
 
 [node name="grass7" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 807.868, 1777.06 )
 
 [node name="grass8" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 741.012, 2011.06 )
+position = Vector2( 950.316, 1077.68 )
 
 [node name="grass9" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 484.729, 1765.92 )
+position = Vector2( 524.327, 476.157 )
 
 [node name="grass10" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 295.304, 2022.2 )
+position = Vector2( 532.892, 1026.59 )
 
 [node name="grass11" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 540.443, 2111.34 )
+position = Vector2( -585.271, 957.342 )
 
 [node name="grass12" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 61.3066, 1788.2 )
+position = Vector2( 1328.44, 843.505 )
+
+[node name="grass17" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 270.61, 2772.49 )
+
+[node name="grass18" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 1973.32, 2913.91 )
+
+[node name="grass19" parent="level" instance=ExtResource( 3 )]
+position = Vector2( -685.399, 2715.92 )
+
+[node name="grass20" parent="level" instance=ExtResource( 3 )]
+position = Vector2( -798.536, 1680.72 )
+
+[node name="grass21" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 547.796, 2048.41 )
+
+[node name="grass22" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3274.4, 1940.93 )
+
+[node name="grass23" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2295.76, 2235.09 )
+
+[node name="grass25" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3147.26, 2675.24 )
+
+[node name="grass26" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3017.5, 2734.68 )
+
+[node name="grass27" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3260.4, 2733.52 )
+
+[node name="grass24" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2493.75, 1273.43 )
 
 [node name="grass13" parent="level" instance=ExtResource( 3 )]
-position = Vector2( -217.261, 2122.48 )
+position = Vector2( -418.021, 1861.92 )
 
 [node name="mushroom_big" parent="level" instance=ExtResource( 1 )]
-position = Vector2( 2278.7, 2345.34 )
+position = Vector2( 1893.6, 2065.95 )
 
 [node name="mushroom_small" parent="level" instance=ExtResource( 9 )]
 position = Vector2( 1955.56, 2467.91 )
@@ -123,7 +413,7 @@ position = Vector2( -369.359, -286.035 )
 position = Vector2( -921.388, -934.964 )
 
 [node name="grass16" parent="level" instance=ExtResource( 3 )]
-position = Vector2( -1711.26, -1401.84 )
+position = Vector2( 249.609, 621.791 )
 
 [node name="enemy" parent="level" instance=ExtResource( 4 )]
 position = Vector2( 909.861, 2408.58 )
@@ -149,29 +439,9 @@ position = Vector2( 1766.1, 666.819 )
 [node name="enemy8" parent="level" instance=ExtResource( 4 )]
 position = Vector2( 2446.6, 633.461 )
 
-[node name="Item" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 1032.97, 1956.3 )
-
-[node name="Item2" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 1234.96, 1710.6 )
-item_type = "Magic Sword"
-
-[node name="Item3" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 969.666, 1659.36 )
-item_type = "Coso"
-amount = 3
-
-[node name="Item6" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2636.78, 2137.18 )
-
-[node name="Item5" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2838.76, 1891.49 )
-item_type = "Magic Sword"
-
-[node name="Item4" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2573.47, 1840.24 )
-item_type = "Coso"
-amount = 3
+[node name="La del diego" parent="level" instance=ExtResource( 12 )]
+position = Vector2( 2811.17, 808.687 )
+item_type = "La del diego"
 
 [node name="Item9" parent="level" instance=ExtResource( 12 )]
 position = Vector2( 2911.12, 2411.52 )
@@ -187,6 +457,29 @@ amount = 3
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
+[node name="puddle_big" type="Sprite" parent="."]
+position = Vector2( 3897.17, 1409.15 )
+rotation = 1.5708
+texture = ExtResource( 10 )
+
+[node name="puddle_big3" type="Sprite" parent="."]
+position = Vector2( 3891.51, 453.144 )
+rotation = 1.5708
+texture = ExtResource( 10 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 autoplay = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1210.89, 13.4543 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 470.902, 3054.14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1210.89, 13.4543 )
+shape = SubResource( 2 )
