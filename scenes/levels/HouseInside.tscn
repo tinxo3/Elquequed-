@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://textures/house_inside.png" type="Texture" id=1]
+[ext_resource path="res://music/Music Lino/Casa.mp3" type="AudioStream" id=2]
 [ext_resource path="res://scenes/props/Table.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/misc/Exit.gd" type="Script" id=4]
 [ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/misc/MusicTrack.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/characters/Npc.tscn" type="PackedScene" id=8]
 
@@ -80,9 +80,6 @@ position = Vector2( 1.10724, 6.72946 )
 current = true
 zoom = Vector2( 1.6, 1.6 )
 
-[node name="music_track" parent="." instance=ExtResource( 6 )]
-music_track = "res://music/a-2-3-groovy-bgm.ogg"
-
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( -1.51876, 149.033 )
 scale = Vector2( 0.974315, 0.532109 )
@@ -90,5 +87,9 @@ polygon = PoolVector2Array( -859.39, 362.047, -856.453, 670.362, 855.425, 676.23
 vertex_colors = PoolColorArray( 0, 0, 0, 0, 0, 0, 0, 0.831373, 0, 0, 0, 0.839216, 0, 0, 0, 0 )
 
 [node name="UI" parent="." instance=ExtResource( 7 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
 
 [editable path="house_inside/Dadbug"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://textures/menu/background.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://textures/menu/continue.png" type="Texture" id=7]
 [ext_resource path="res://textures/menu/new_game.png" type="Texture" id=8]
 [ext_resource path="res://textures/menu/credits.png" type="Texture" id=9]
+[ext_resource path="res://music/Music Lino/Menu.mp3" type="AudioStream" id=10]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -64,10 +65,10 @@ focus_neighbour_left = NodePath("../quit")
 focus_neighbour_top = NodePath("../quit")
 focus_neighbour_right = NodePath("../controls")
 focus_neighbour_bottom = NodePath("../continue")
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.364706, 0.364706, 0.364706, 1 )
+custom_fonts/font = ExtResource( 1 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -88,10 +89,10 @@ focus_neighbour_left = NodePath("../quit")
 focus_neighbour_top = NodePath("../new_game")
 focus_neighbour_right = NodePath("../controls")
 focus_neighbour_bottom = NodePath("../controls")
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_disabled = Color( 0.780392, 0.780392, 0.780392, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.364706, 0.364706, 0.364706, 1 )
+custom_fonts/font = ExtResource( 1 )
 disabled = true
 icon = ExtResource( 7 )
 flat = true
@@ -150,6 +151,10 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]

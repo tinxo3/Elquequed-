@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/levels/credits.gd" type="Script" id=1]
 [ext_resource path="res://textures/menu/CREDITS NAMES.png" type="Texture" id=2]
+[ext_resource path="res://music/Music Lino/Creditos.mp3" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "creditos"
@@ -81,6 +82,8 @@ __meta__ = {
 }
 
 [node name="Añadir Música" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [node name="credit" type="AnimationPlayer" parent="."]
 autoplay = "creditos"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Enemigos Final.mp3-430d08c11f62d2a697677881f06b5482.mp3str"
+
+[deps]
+
+source_file="res://music/Music Lino/Enemigos Final.mp3"
+dest_files=[ "res://.import/Enemigos Final.mp3-430d08c11f62d2a697677881f06b5482.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

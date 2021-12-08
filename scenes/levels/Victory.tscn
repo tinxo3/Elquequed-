@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://music/you win!.webm" type="VideoStream" id=1]
 [ext_resource path="res://scenes/levels/Victory.gd" type="Script" id=2]
+[ext_resource path="res://music/Music Lino/End Game (Victoria).mp3" type="AudioStream" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -21,5 +22,7 @@ __meta__ = {
 }
 
 [node name="Añadir Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

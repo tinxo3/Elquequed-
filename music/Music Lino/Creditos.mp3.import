@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Creditos.mp3-08e9c87d5a3d0680b1f9c41dac277b48.mp3str"
+
+[deps]
+
+source_file="res://music/Music Lino/Creditos.mp3"
+dest_files=[ "res://.import/Creditos.mp3-08e9c87d5a3d0680b1f9c41dac277b48.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

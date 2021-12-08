@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/310-world-map-loop.ogg-35cad74ebb2f5c177aacd2f726faf7b2.oggstr"
+
+[deps]
+
+source_file="res://music/Music Naza/310-world-map-loop.ogg"
+dest_files=[ "res://.import/310-world-map-loop.ogg-35cad74ebb2f5c177aacd2f726faf7b2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

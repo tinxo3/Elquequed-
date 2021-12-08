@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/props/Grass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/characters/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/props/House.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/misc/MusicTrack.tscn" type="PackedScene" id=6]
+[ext_resource path="res://music/Music Lino/Campito.mp3" type="AudioStream" id=6]
 [ext_resource path="res://scenes/props/Flower.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/props/MushroomSmall.tscn" type="PackedScene" id=9]
@@ -56,9 +56,7 @@ position = Vector2( 1509.86, 2579.34 )
 position = Vector2( 908.151, 406.509 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
-[node name="house_outside" type="Position2D" parent="level/house" groups=[
-"spawnpoints",
-]]
+[node name="house_outside" type="Position2D" parent="level/house" groups=["spawnpoints"]]
 position = Vector2( -2.12201, 173.199 )
 
 [node name="flower" parent="level" instance=ExtResource( 7 )]
@@ -187,7 +185,8 @@ position = Vector2( 2847.81, 2114.57 )
 item_type = "Coso"
 amount = 3
 
-[node name="music_track" parent="." instance=ExtResource( 6 )]
-music_track = "res://music/310-world-map-loop.ogg"
-
 [node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true

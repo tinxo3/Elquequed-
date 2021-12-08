@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Level del Item.mp3-d2470a61dfd208e7e841e021fce2ada6.mp3str"
+
+[deps]
+
+source_file="res://music/Music Lino/Level del Item.mp3"
+dest_files=[ "res://.import/Level del Item.mp3-d2470a61dfd208e7e841e021fce2ada6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
