@@ -1,0 +1,138 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/misc/ItemSpawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/Area2D.gd" type="Script" id=2]
+[ext_resource path="res://textures/caja 7 hp.png" type="Texture" id=3]
+[ext_resource path="res://textures/caja 4 hp.png" type="Texture" id=4]
+[ext_resource path="res://textures/caja 0 hp.png" type="Texture" id=5]
+[ext_resource path="res://textures/caja 10 hp.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Caja",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Caja hp 0"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Caja hp 10"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Caja hp 4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Caja hp 7"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Destroy"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 18.5799, 5.01025 )
+
+[node name="Caja" type="Node2D"]
+
+[node name="Areacaja" type="Area2D" parent="."]
+collision_mask = 32
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Areacaja"]
+position = Vector2( 398.626, 186.652 )
+scale = Vector2( 0.996658, 0.929538 )
+frames = SubResource( 1 )
+animation = "Caja"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Areacaja"]
+autoplay = "Caja hp 10"
+"anims/Caja hp 0" = SubResource( 2 )
+"anims/Caja hp 10" = SubResource( 3 )
+"anims/Caja hp 4" = SubResource( 4 )
+"anims/Caja hp 7" = SubResource( 5 )
+anims/Destroy = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areacaja"]
+position = Vector2( 388.815, 184.602 )
+scale = Vector2( -2.37202, -8.84164 )
+shape = SubResource( 7 )
+
+[node name="item_spawner" parent="Areacaja" instance=ExtResource( 1 )]
+visible = false
+
+[connection signal="area_entered" from="Areacaja" to="Areacaja" method="_on_Area2D_area_entered"]
+[connection signal="animation_started" from="Areacaja/AnimationPlayer" to="Areacaja" method="_on_AnimationPlayer_animation_started"]
+[connection signal="visibility_changed" from="Areacaja/item_spawner" to="Areacaja" method="_on_item_spawner_visibility_changed"]

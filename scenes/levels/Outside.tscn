@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://textures/cartoon-image-of-wine-bottle-vector-15676016.png" type="Texture" id=12]
 [ext_resource path="res://scenes/characters/Npc.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/misc/Quest.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/levels/Caja.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 70.2834, 110.451 )
@@ -569,3 +570,6 @@ position = Vector2( 470.902, 3054.14 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 1210.89, 13.4543 )
 shape = SubResource( 2 )
+
+[node name="Caja" parent="." instance=ExtResource( 15 )]
+position = Vector2( -813.559, 378.683 )
