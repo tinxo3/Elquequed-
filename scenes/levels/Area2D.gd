@@ -16,7 +16,7 @@ func _ready():
 func _despawn():
 	if hp <= 0 : 
 		get_node("item_spawner").spawn()
-
+		queue_free()
 
 
 func _on_Area2D_area_entered(area):

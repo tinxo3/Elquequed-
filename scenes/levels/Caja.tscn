@@ -101,13 +101,29 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true, false, true, false, true, false ]
 }
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_despawn"
+} ]
+}
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 18.5799, 5.01025 )
 
 [node name="Caja" type="Node2D"]
+position = Vector2( -1, 2 )
 
 [node name="Areacaja" type="Area2D" parent="."]
+position = Vector2( 0, -1 )
 collision_mask = 32
 script = ExtResource( 2 )
 
@@ -116,6 +132,7 @@ position = Vector2( 398.626, 186.652 )
 scale = Vector2( 0.996658, 0.929538 )
 frames = SubResource( 1 )
 animation = "Caja"
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Areacaja"]
 autoplay = "Caja hp 10"
@@ -126,12 +143,13 @@ autoplay = "Caja hp 10"
 anims/Destroy = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areacaja"]
-position = Vector2( 388.815, 184.602 )
+position = Vector2( 395.815, 187.602 )
 scale = Vector2( -2.37202, -8.84164 )
 shape = SubResource( 7 )
 
 [node name="item_spawner" parent="Areacaja" instance=ExtResource( 1 )]
 visible = false
+position = Vector2( 396, 188 )
 
 [connection signal="area_entered" from="Areacaja" to="Areacaja" method="_on_Area2D_area_entered"]
 [connection signal="animation_started" from="Areacaja/AnimationPlayer" to="Areacaja" method="_on_AnimationPlayer_animation_started"]
