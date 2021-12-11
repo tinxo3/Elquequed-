@@ -1,15 +1,24 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://textures/menu/credits pressed.png" type="Texture" id=1]
 [ext_resource path="res://textures/menu/background.png" type="Texture" id=2]
 [ext_resource path="res://textures/menu/title.png" type="Texture" id=3]
 [ext_resource path="res://scenes/levels/Menu.gd" type="Script" id=4]
-[ext_resource path="res://textures/menu/controls.png" type="Texture" id=5]
-[ext_resource path="res://textures/menu/quit.png" type="Texture" id=6]
-[ext_resource path="res://textures/menu/continue.png" type="Texture" id=7]
-[ext_resource path="res://textures/menu/new_game.png" type="Texture" id=8]
-[ext_resource path="res://textures/menu/credits.png" type="Texture" id=9]
+[ext_resource path="res://textures/menu/credits normal.png" type="Texture" id=5]
+[ext_resource path="res://textures/menu/controls hover.png" type="Texture" id=6]
+[ext_resource path="res://textures/menu/continue press.png" type="Texture" id=7]
+[ext_resource path="res://textures/menu/controls pressed.png" type="Texture" id=8]
+[ext_resource path="res://textures/menu/quit press.png" type="Texture" id=9]
 [ext_resource path="res://music/Music Lino/Menu.mp3" type="AudioStream" id=10]
+[ext_resource path="res://textures/menu/controls normal.png" type="Texture" id=11]
+[ext_resource path="res://textures/menu/quit normal.png" type="Texture" id=12]
+[ext_resource path="res://textures/menu/continue hover.png" type="Texture" id=13]
+[ext_resource path="res://textures/menu/credits hover.png" type="Texture" id=14]
+[ext_resource path="res://textures/menu/quit hover.png" type="Texture" id=15]
+[ext_resource path="res://textures/menu/NEWGAME normal.png" type="Texture" id=16]
+[ext_resource path="res://textures/menu/newgame hover.png" type="Texture" id=17]
+[ext_resource path="res://textures/menu/continue normal.png" type="Texture" id=18]
+[ext_resource path="res://textures/menu/newgame press.png" type="Texture" id=19]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -40,10 +49,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -266.843
-margin_top = -220.654
-margin_right = 287.157
-margin_bottom = 9.34589
+margin_left = -268.625
+margin_top = -240.254
+margin_right = 285.375
+margin_bottom = -10.2539
+rect_scale = Vector2( 1.01507, 1.10312 )
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6
@@ -51,103 +61,67 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="new_game" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -162.74
-margin_top = 6.15149
-margin_right = 386.26
-margin_bottom = 158.151
-rect_scale = Vector2( 0.570488, 0.548198 )
-focus_neighbour_left = NodePath("../quit")
-focus_neighbour_top = NodePath("../quit")
-focus_neighbour_right = NodePath("../controls")
-focus_neighbour_bottom = NodePath("../continue")
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.364706, 0.364706, 0.364706, 1 )
-icon = ExtResource( 8 )
-flat = true
+[node name="new_game" type="TextureButton" parent="."]
+margin_left = 334.6
+margin_top = 283.782
+margin_right = 725.6
+margin_bottom = 403.782
+rect_scale = Vector2( 0.887696, 0.86992 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="continue" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -157.308
-margin_top = 86.3677
-margin_right = 391.692
-margin_bottom = 238.368
-rect_scale = Vector2( 0.541969, 0.560595 )
-focus_neighbour_left = NodePath("../quit")
-focus_neighbour_top = NodePath("../new_game")
-focus_neighbour_right = NodePath("../controls")
-focus_neighbour_bottom = NodePath("../controls")
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color_disabled = Color( 0.780392, 0.780392, 0.780392, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.364706, 0.364706, 0.364706, 1 )
-disabled = true
-icon = ExtResource( 7 )
-flat = true
+[node name="continue" type="TextureButton" parent="."]
+margin_left = 336.76
+margin_top = 375.959
+margin_right = 727.76
+margin_bottom = 495.959
+rect_scale = Vector2( 0.87868, 0.857231 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="controls" type="Button" parent="."]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -208.565
-margin_top = 244.99
-margin_right = 347.435
-margin_bottom = 362.99
-rect_scale = Vector2( 0.359855, 0.368872 )
-focus_neighbour_left = NodePath("../quit")
-focus_neighbour_top = NodePath("../continue")
-focus_neighbour_right = NodePath("../quit")
-focus_neighbour_bottom = NodePath("../new_game")
-custom_fonts/font = ExtResource( 1 )
-icon = ExtResource( 5 )
-flat = true
+[node name="quit" type="TextureButton" parent="."]
+margin_left = -8.90894
+margin_top = 522.067
+margin_right = 241.091
+margin_bottom = 642.067
+rect_scale = Vector2( 0.660977, 0.666797 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="quit" type="Button" parent="."]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = 4.9543
-margin_top = -53.3568
-margin_right = 296.954
-margin_bottom = 69.6432
-rect_scale = Vector2( 0.365071, 0.34837 )
-focus_neighbour_left = NodePath("../controls")
-focus_neighbour_top = NodePath("../continue")
-focus_neighbour_right = NodePath("../controls")
-focus_neighbour_bottom = NodePath("../new_game")
-custom_fonts/font = ExtResource( 1 )
-icon = ExtResource( 6 )
-flat = true
+[node name="credits" type="TextureButton" parent="."]
+margin_left = -24.9452
+margin_top = -7.12717
+margin_right = 383.055
+margin_bottom = 112.873
+rect_scale = Vector2( 0.782941, 0.704997 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="credits" type="Button" parent="."]
-margin_left = 1.00961
-margin_top = 6.53891
-margin_right = 430.01
-margin_bottom = 118.539
-rect_scale = Vector2( 0.400233, 0.332105 )
-icon = ExtResource( 9 )
-flat = true
+[node name="controls" type="TextureButton" parent="."]
+margin_left = 764.391
+margin_top = 525.63
+margin_right = 1172.39
+margin_bottom = 645.63
+rect_scale = Vector2( 0.632354, 0.659227 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -158,6 +132,6 @@ autoplay = true
 
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]

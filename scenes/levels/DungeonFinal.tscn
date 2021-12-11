@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/props/MushroomSmall.tscn" type="PackedScene" id=3]
@@ -6,6 +6,18 @@
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/props/puddle_small.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 758.078, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1516.29, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 386.125, 32.647 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 396.383, 90.3586 )
 
 [node name="DungeonFinal" type="Node"]
 
@@ -16,8 +28,48 @@ position = Vector2( -1062.12, 3162.53 )
 rotation = 3.1404
 texture = ExtResource( 7 )
 
+[node name="puddle_small93" type="Sprite" parent="paredes"]
+position = Vector2( 5419.69, 1941.13 )
+rotation = 3.1404
+texture = ExtResource( 7 )
+
+[node name="puddle_small94" type="Sprite" parent="paredes"]
+position = Vector2( 5400.65, 3160.99 )
+rotation = 3.1404
+texture = ExtResource( 7 )
+
 [node name="puddle_small5" type="Sprite" parent="paredes"]
 position = Vector2( -1252.6, 2914.89 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small111" type="Sprite" parent="paredes"]
+position = Vector2( 5495.77, 709.382 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small114" type="Sprite" parent="paredes"]
+position = Vector2( 5495.77, 397.734 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small115" type="Sprite" parent="paredes"]
+position = Vector2( 5522.68, 4164.95 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small116" type="Sprite" parent="paredes"]
+position = Vector2( 5529.04, 3873.32 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small112" type="Sprite" parent="paredes"]
+position = Vector2( 5495.77, 997.057 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small113" type="Sprite" parent="paredes"]
+position = Vector2( 5531.73, 3574.15 )
 rotation = -1.55683
 texture = ExtResource( 7 )
 
@@ -96,6 +148,11 @@ position = Vector2( 1211.04, 1441.79 )
 rotation = -1.5708
 texture = ExtResource( 7 )
 
+[node name="puddle_small97" type="Sprite" parent="paredes"]
+position = Vector2( 5498.94, 1226.83 )
+rotation = -1.5708
+texture = ExtResource( 7 )
+
 [node name="puddle_small21" type="Sprite" parent="paredes"]
 position = Vector2( 1217.39, 3607 )
 rotation = -1.58127
@@ -103,6 +160,41 @@ texture = ExtResource( 7 )
 
 [node name="puddle_small24" type="Sprite" parent="paredes"]
 position = Vector2( 1401.53, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small100" type="Sprite" parent="paredes"]
+position = Vector2( 5734.68, 1939.04 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small101" type="Sprite" parent="paredes"]
+position = Vector2( 6356.93, 1916.41 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small102" type="Sprite" parent="paredes"]
+position = Vector2( 6062.78, 1916.41 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small117" type="Sprite" parent="paredes"]
+position = Vector2( 6466.41, 4405.46 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small120" type="Sprite" parent="paredes"]
+position = Vector2( 6816.22, 4405.46 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small118" type="Sprite" parent="paredes"]
+position = Vector2( 6103.14, 4405.46 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small119" type="Sprite" parent="paredes"]
+position = Vector2( 5780.24, 4405.46 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
@@ -136,6 +228,16 @@ position = Vector2( 2506.36, 3403.81 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
+[node name="puddle_small95" type="Sprite" parent="paredes"]
+position = Vector2( 5407.08, 2600.72 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small96" type="Sprite" parent="paredes"]
+position = Vector2( 5371.12, 1402.07 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
 [node name="puddle_small42" type="Sprite" parent="paredes"]
 position = Vector2( 2842.89, 3403.81 )
 rotation = 6.28319
@@ -143,6 +245,46 @@ texture = ExtResource( 7 )
 
 [node name="puddle_small45" type="Sprite" parent="paredes"]
 position = Vector2( 3185.77, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small121" type="Sprite" parent="paredes"]
+position = Vector2( 7437.34, 3524.9 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small128" type="Sprite" parent="paredes"]
+position = Vector2( 7437.34, 3524.9 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small124" type="Sprite" parent="paredes"]
+position = Vector2( 6468.63, 134.404 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small125" type="Sprite" parent="paredes"]
+position = Vector2( 6105.36, 147.859 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small126" type="Sprite" parent="paredes"]
+position = Vector2( 5742.1, 161.313 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small127" type="Sprite" parent="paredes"]
+position = Vector2( 6831.9, 120.95 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small122" type="Sprite" parent="paredes"]
+position = Vector2( 7154.8, 3524.9 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small123" type="Sprite" parent="paredes"]
+position = Vector2( 6804.99, 3524.9 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
@@ -216,6 +358,76 @@ position = Vector2( 5097, 1943.4 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
+[node name="puddle_small129" type="Sprite" parent="paredes"]
+position = Vector2( 5097, 1943.4 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small130" type="Sprite" parent="paredes"]
+position = Vector2( 7047.88, 880.507 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small134" type="Sprite" parent="paredes"]
+position = Vector2( 7922.41, 4365.18 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small135" type="Sprite" parent="paredes"]
+position = Vector2( 7545.69, 4378.64 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small136" type="Sprite" parent="paredes"]
+position = Vector2( 7168.97, 4392.09 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small131" type="Sprite" parent="paredes"]
+position = Vector2( 6724.98, 893.961 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small166" type="Sprite" parent="paredes"]
+position = Vector2( 9262.11, 4382.52 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small167" type="Sprite" parent="paredes"]
+position = Vector2( 8929.87, 4382.52 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small168" type="Sprite" parent="paredes"]
+position = Vector2( 8597.62, 4382.52 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small169" type="Sprite" parent="paredes"]
+position = Vector2( 8280.48, 4382.52 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small170" type="Sprite" parent="paredes"]
+position = Vector2( 9971.9, 4352.32 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small171" type="Sprite" parent="paredes"]
+position = Vector2( 9579.25, 4382.52 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small132" type="Sprite" parent="paredes"]
+position = Vector2( 6724.98, 893.961 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small133" type="Sprite" parent="paredes"]
+position = Vector2( 7411.15, 867.052 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
 [node name="puddle_small50" type="Sprite" parent="paredes"]
 position = Vector2( 3839.78, 3867.33 )
 rotation = 3.14159
@@ -228,6 +440,11 @@ texture = ExtResource( 7 )
 
 [node name="puddle_small67" type="Sprite" parent="paredes"]
 position = Vector2( 1401.53, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small99" type="Sprite" parent="paredes"]
+position = Vector2( 5689.43, 2589.31 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
@@ -281,6 +498,56 @@ position = Vector2( 5097, 1410.04 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
+[node name="puddle_small109" type="Sprite" parent="paredes"]
+position = Vector2( 6364.13, 2564.04 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small110" type="Sprite" parent="paredes"]
+position = Vector2( 6058.67, 2575.35 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small137" type="Sprite" parent="paredes"]
+position = Vector2( 7875, 99.7529 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small138" type="Sprite" parent="paredes"]
+position = Vector2( 7525.19, 99.7529 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small139" type="Sprite" parent="paredes"]
+position = Vector2( 7175.38, 113.207 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small148" type="Sprite" parent="paredes"]
+position = Vector2( 9274.25, 99.7529 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small149" type="Sprite" parent="paredes"]
+position = Vector2( 8951.35, 99.7524 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small150" type="Sprite" parent="paredes"]
+position = Vector2( 8614.99, 86.2983 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small151" type="Sprite" parent="paredes"]
+position = Vector2( 8251.72, 86.2983 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small152" type="Sprite" parent="paredes"]
+position = Vector2( 9650.98, 86.2983 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
 [node name="puddle_small75" type="Sprite" parent="paredes"]
 position = Vector2( 4163.61, 1289.4 )
 rotation = 6.66181
@@ -303,6 +570,56 @@ texture = ExtResource( 7 )
 
 [node name="puddle_small56" type="Sprite" parent="paredes"]
 position = Vector2( 1223.74, 2914.89 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small140" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 1340.73 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small141" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 1017.83 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small145" type="Sprite" parent="paredes"]
+position = Vector2( 7628.01, 2982.16 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small147" type="Sprite" parent="paredes"]
+position = Vector2( 7654.92, 3372.34 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small146" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 2632.35 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small142" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 2295.99 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small143" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 1999.99 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small153" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 1999.99 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small154" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 1999.99 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small144" type="Sprite" parent="paredes"]
+position = Vector2( 7614.55, 1690.54 )
 rotation = -1.58127
 texture = ExtResource( 7 )
 
@@ -353,6 +670,96 @@ texture = ExtResource( 7 )
 
 [node name="puddle_small25" type="Sprite" parent="paredes"]
 position = Vector2( 1680.91, 3283.17 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small103" type="Sprite" parent="paredes"]
+position = Vector2( 6545.81, 986.487 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small106" type="Sprite" parent="paredes"]
+position = Vector2( 6588.12, 3424.44 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small107" type="Sprite" parent="paredes"]
+position = Vector2( 6579.75, 3102.15 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small108" type="Sprite" parent="paredes"]
+position = Vector2( 6579.75, 2796.68 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small104" type="Sprite" parent="paredes"]
+position = Vector2( 6545.81, 1314.58 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small155" type="Sprite" parent="paredes"]
+position = Vector2( 9977.69, 924.034 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small172" type="Sprite" parent="paredes"]
+position = Vector2( 10098.5, 4050.15 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small156" type="Sprite" parent="paredes"]
+position = Vector2( 9962.59, 591.79 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small157" type="Sprite" parent="paredes"]
+position = Vector2( 9932.39, 304.853 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small158" type="Sprite" parent="paredes"]
+position = Vector2( 10068.3, 2570.15 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small159" type="Sprite" parent="paredes"]
+position = Vector2( 10053.2, 2222.81 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small160" type="Sprite" parent="paredes"]
+position = Vector2( 10038.1, 1860.36 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small163" type="Sprite" parent="paredes"]
+position = Vector2( 10098.5, 3672.6 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small164" type="Sprite" parent="paredes"]
+position = Vector2( 10083.4, 3279.94 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small165" type="Sprite" parent="paredes"]
+position = Vector2( 10068.3, 2932.6 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small161" type="Sprite" parent="paredes"]
+position = Vector2( 10007.9, 1588.52 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small162" type="Sprite" parent="paredes"]
+position = Vector2( 9992.8, 1256.28 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small105" type="Sprite" parent="paredes"]
+position = Vector2( 6545.8, 1654 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
@@ -466,10 +873,219 @@ position = Vector2( 3617.54, 1664.02 )
 rotation = 3.15035
 texture = ExtResource( 7 )
 
+[node name="puddle_small98" type="Sprite" parent="paredes"]
+position = Vector2( 5532.88, 3285.92 )
+rotation = -1.5708
+texture = ExtResource( 7 )
+
 [node name="puddle_small44" type="Sprite" parent="paredes"]
 position = Vector2( 3192.12, 2540.27 )
 rotation = 1.55857
 texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="paredes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2( -405.791, 2103.71 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2( -459.185, 3054.11 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2( 2338.64, 2701.72 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2( 2381.35, 2338.64 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2( 4997.64, 3043.44 )
+scale = Vector2( 0.886896, -1.41156 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="paredes/StaticBody2D"]
+position = Vector2( 4933.57, 1505.7 )
+scale = Vector2( 0.87492, 1.68329 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="paredes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D2"]
+position = Vector2( 2677.41, 1278.16 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="paredes/StaticBody2D2"]
+position = Vector2( 2798.5, 3767.22 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="paredes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
+position = Vector2( 4251.57, 2273.78 )
+rotation = 1.5708
+scale = Vector2( 1.08641, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
+position = Vector2( 3094.5, 2529.42 )
+rotation = 1.5708
+scale = Vector2( 1.08641, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
+position = Vector2( 4278.48, 3471.22 )
+rotation = 1.5708
+scale = Vector2( 1.08641, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
+position = Vector2( 1601.07, 3094.5 )
+rotation = 1.5708
+scale = Vector2( 1.08641, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
+position = Vector2( 1627.97, 1977.79 )
+rotation = 1.5708
+scale = Vector2( 1.08641, 1 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="paredes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 571.464, 2124.81 )
+rotation = -2.93089
+scale = Vector2( 1.43926, 1.53102 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 3939.66, 1129.93 )
+rotation = -2.57609
+scale = Vector2( 1.43926, 1.53102 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 7114.46, 3517.39 )
+rotation = -3.13976
+scale = Vector2( 1.34343, -1.26372 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 7165.26, 863.251 )
+rotation = -3.13976
+scale = Vector2( 1.34343, -1.26372 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 5527.06, 863.251 )
+rotation = -1.59089
+scale = Vector2( 1.55341, -0.965369 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 5552.45, 3707.87 )
+rotation = -1.59089
+scale = Vector2( 1.55341, -0.965369 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 603.501, 2973.64 )
+rotation = -3.44647
+scale = Vector2( 1.43503, -1.21106 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 6527.39, 1346.12 )
+rotation = 1.5708
+scale = Vector2( 1.32241, 1.0829 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 6565.49, 3085.91 )
+rotation = 1.5708
+scale = Vector2( 1.32241, 1.0829 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 1206.42, 1803.29 )
+rotation = 1.5708
+scale = Vector2( 1.32241, 1.0829 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( -1257.22, 2577.94 )
+rotation = 1.5708
+scale = Vector2( 1.32241, 1.0829 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 7636.1, 2255.03 )
+rotation = 1.5708
+scale = Vector2( 3.46806, -1.33832 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 10017.5, 2255.03 )
+rotation = 1.52212
+scale = Vector2( 5.38492, 1.08872 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 7757.19, 4407.73 )
+rotation = -0.017602
+scale = Vector2( 5.89642, 1.48896 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 7743.73, 115.793 )
+rotation = -0.017602
+scale = Vector2( 5.89642, 1.48896 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 4864.5, 1353.59 )
+rotation = -0.017602
+scale = Vector2( 1.48162, 1.53492 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 5591.04, 1945.58 )
+rotation = -0.017602
+scale = Vector2( 3.24416, 1.53492 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 5564.13, 2551.03 )
+rotation = -0.017602
+scale = Vector2( 3.24416, 1.53492 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 3855.43, 2618.3 )
+rotation = 1.5708
+scale = Vector2( 2.1528, 1.22798 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 2779.08, 1689.95 )
+rotation = -0.00212649
+scale = Vector2( 2.87719, 1.50218 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 2779.08, 3358.29 )
+rotation = -0.00274543
+scale = Vector2( 2.84141, 1.53492 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 1231.82, 3263.7 )
+rotation = 1.5708
+scale = Vector2( 1.32241, 1.0829 )
+shape = SubResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -898.727, 2639.82 )
