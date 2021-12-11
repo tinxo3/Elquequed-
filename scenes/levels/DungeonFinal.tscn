@@ -1,3 +1,495 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/props/MushroomSmall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/props/Grass.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://textures/props/puddle_small.png" type="Texture" id=7]
 
 [node name="DungeonFinal" type="Node"]
+
+[node name="paredes" type="Node" parent="."]
+
+[node name="puddle_small" type="Sprite" parent="paredes"]
+position = Vector2( -1062.12, 3162.53 )
+rotation = 3.1404
+texture = ExtResource( 7 )
+
+[node name="puddle_small5" type="Sprite" parent="paredes"]
+position = Vector2( -1252.6, 2914.89 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small6" type="Sprite" parent="paredes"]
+position = Vector2( -1265.3, 2559.32 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small7" type="Sprite" parent="paredes"]
+position = Vector2( -1271.65, 2229.14 )
+rotation = -1.55683
+texture = ExtResource( 7 )
+
+[node name="puddle_small8" type="Sprite" parent="paredes"]
+position = Vector2( -1055.77, 1994.2 )
+rotation = 0.010472
+texture = ExtResource( 7 )
+
+[node name="puddle_small9" type="Sprite" parent="paredes"]
+position = Vector2( -693.839, 2000.55 )
+rotation = 0.010472
+texture = ExtResource( 7 )
+
+[node name="puddle_small10" type="Sprite" parent="paredes"]
+position = Vector2( -331.911, 2000.55 )
+rotation = 0.010472
+texture = ExtResource( 7 )
+
+[node name="puddle_small11" type="Sprite" parent="paredes"]
+position = Vector2( 23.667, 2000.55 )
+rotation = 0.010472
+texture = ExtResource( 7 )
+
+[node name="puddle_small13" type="Sprite" parent="paredes"]
+position = Vector2( 347.497, 2051.35 )
+rotation = 0.429572
+texture = ExtResource( 7 )
+
+[node name="puddle_small14" type="Sprite" parent="paredes"]
+position = Vector2( 658.627, 2191.04 )
+rotation = 0.429572
+texture = ExtResource( 7 )
+
+[node name="puddle_small15" type="Sprite" parent="paredes"]
+position = Vector2( 1026.9, 2235.49 )
+rotation = 0.00113664
+texture = ExtResource( 7 )
+
+[node name="puddle_small38" type="Sprite" parent="paredes"]
+position = Vector2( 1947.6, 2235.49 )
+rotation = 0.00113664
+texture = ExtResource( 7 )
+
+[node name="puddle_small39" type="Sprite" parent="paredes"]
+position = Vector2( 2322.22, 2235.49 )
+rotation = 0.00113664
+texture = ExtResource( 7 )
+
+[node name="puddle_small40" type="Sprite" parent="paredes"]
+position = Vector2( 2627.01, 2235.49 )
+rotation = 0.00113664
+texture = ExtResource( 7 )
+
+[node name="puddle_small18" type="Sprite" parent="paredes"]
+position = Vector2( 1204.69, 2133.89 )
+rotation = -1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small19" type="Sprite" parent="paredes"]
+position = Vector2( 1211.04, 1810.06 )
+rotation = -1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small20" type="Sprite" parent="paredes"]
+position = Vector2( 1211.04, 1441.79 )
+rotation = -1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small21" type="Sprite" parent="paredes"]
+position = Vector2( 1217.39, 3607 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small24" type="Sprite" parent="paredes"]
+position = Vector2( 1401.53, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small31" type="Sprite" parent="paredes"]
+position = Vector2( 1744.41, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small32" type="Sprite" parent="paredes"]
+position = Vector2( 2099.99, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small33" type="Sprite" parent="paredes"]
+position = Vector2( 2468.27, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small30" type="Sprite" parent="paredes"]
+position = Vector2( 1865.05, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small34" type="Sprite" parent="paredes"]
+position = Vector2( 2207.93, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small35" type="Sprite" parent="paredes"]
+position = Vector2( 2506.36, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small42" type="Sprite" parent="paredes"]
+position = Vector2( 2842.89, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small45" type="Sprite" parent="paredes"]
+position = Vector2( 3185.77, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small65" type="Sprite" parent="paredes"]
+position = Vector2( 4436.64, 2603.76 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small66" type="Sprite" parent="paredes"]
+position = Vector2( 4779.52, 2603.76 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small92" type="Sprite" parent="paredes"]
+position = Vector2( 5103.35, 2603.76 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small46" type="Sprite" parent="paredes"]
+position = Vector2( 3484.2, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small54" type="Sprite" parent="paredes"]
+position = Vector2( 3750.89, 3403.81 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small47" type="Sprite" parent="paredes"]
+position = Vector2( 2842.89, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small48" type="Sprite" parent="paredes"]
+position = Vector2( 3185.77, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small49" type="Sprite" parent="paredes"]
+position = Vector2( 3484.2, 3873.68 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small62" type="Sprite" parent="paredes"]
+position = Vector2( 4455.69, 3149.83 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small63" type="Sprite" parent="paredes"]
+position = Vector2( 4798.57, 3149.83 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small64" type="Sprite" parent="paredes"]
+position = Vector2( 5097, 3149.83 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small86" type="Sprite" parent="paredes"]
+position = Vector2( 4455.69, 1943.4 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small87" type="Sprite" parent="paredes"]
+position = Vector2( 4798.57, 1943.4 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small88" type="Sprite" parent="paredes"]
+position = Vector2( 5097, 1943.4 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small50" type="Sprite" parent="paredes"]
+position = Vector2( 3839.78, 3867.33 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small51" type="Sprite" parent="paredes"]
+position = Vector2( 4138.21, 3867.33 )
+rotation = 3.14159
+texture = ExtResource( 7 )
+
+[node name="puddle_small67" type="Sprite" parent="paredes"]
+position = Vector2( 1401.53, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small68" type="Sprite" parent="paredes"]
+position = Vector2( 1744.41, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small69" type="Sprite" parent="paredes"]
+position = Vector2( 2099.99, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small70" type="Sprite" parent="paredes"]
+position = Vector2( 2468.27, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small71" type="Sprite" parent="paredes"]
+position = Vector2( 2842.89, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small72" type="Sprite" parent="paredes"]
+position = Vector2( 3185.77, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small73" type="Sprite" parent="paredes"]
+position = Vector2( 3484.2, 1175.1 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small74" type="Sprite" parent="paredes"]
+position = Vector2( 3839.78, 1168.75 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small89" type="Sprite" parent="paredes"]
+position = Vector2( 4423.94, 1410.04 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small90" type="Sprite" parent="paredes"]
+position = Vector2( 4754.12, 1410.04 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small91" type="Sprite" parent="paredes"]
+position = Vector2( 5097, 1410.04 )
+rotation = 6.28319
+texture = ExtResource( 7 )
+
+[node name="puddle_small75" type="Sprite" parent="paredes"]
+position = Vector2( 4163.61, 1289.4 )
+rotation = 6.66181
+texture = ExtResource( 7 )
+
+[node name="puddle_small22" type="Sprite" parent="paredes"]
+position = Vector2( 1223.74, 3283.17 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small23" type="Sprite" parent="paredes"]
+position = Vector2( 1223.74, 2914.89 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small55" type="Sprite" parent="paredes"]
+position = Vector2( 1223.74, 3283.17 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small56" type="Sprite" parent="paredes"]
+position = Vector2( 1223.74, 2914.89 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small57" type="Sprite" parent="paredes"]
+position = Vector2( 3852.48, 3206.98 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small58" type="Sprite" parent="paredes"]
+position = Vector2( 3852.48, 2838.7 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small59" type="Sprite" parent="paredes"]
+position = Vector2( 1223.74, 3283.17 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small60" type="Sprite" parent="paredes"]
+position = Vector2( 4316, 2387.88 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small85" type="Sprite" parent="paredes"]
+position = Vector2( 4316, 2038.65 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small61" type="Sprite" parent="paredes"]
+position = Vector2( 3877.88, 2502.17 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small76" type="Sprite" parent="paredes"]
+position = Vector2( 3852.48, 2133.89 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small77" type="Sprite" parent="paredes"]
+position = Vector2( 3852.48, 2133.89 )
+rotation = -1.58127
+texture = ExtResource( 7 )
+
+[node name="puddle_small84" type="Sprite" parent="paredes"]
+position = Vector2( 3852.48, 1822.76 )
+rotation = -1.5735
+texture = ExtResource( 7 )
+
+[node name="puddle_small25" type="Sprite" parent="paredes"]
+position = Vector2( 1680.91, 3283.17 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small26" type="Sprite" parent="paredes"]
+position = Vector2( 1680.91, 2914.89 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small52" type="Sprite" parent="paredes"]
+position = Vector2( 4347.75, 3619.7 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small53" type="Sprite" parent="paredes"]
+position = Vector2( 4347.75, 3251.42 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small28" type="Sprite" parent="paredes"]
+position = Vector2( 1680.91, 2133.89 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small29" type="Sprite" parent="paredes"]
+position = Vector2( 1680.91, 1765.62 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+
+[node name="puddle_small2" type="Sprite" parent="paredes"]
+position = Vector2( -706.538, 3156.18 )
+rotation = 3.1404
+texture = ExtResource( 7 )
+
+[node name="puddle_small3" type="Sprite" parent="paredes"]
+position = Vector2( -344.61, 3156.18 )
+rotation = 3.1404
+texture = ExtResource( 7 )
+
+[node name="puddle_small4" type="Sprite" parent="paredes"]
+position = Vector2( -8.08105, 3149.83 )
+rotation = 3.1404
+texture = ExtResource( 7 )
+
+[node name="puddle_small12" type="Sprite" parent="paredes"]
+position = Vector2( 347.497, 3073.63 )
+rotation = 2.83878
+texture = ExtResource( 7 )
+
+[node name="puddle_small16" type="Sprite" parent="paredes"]
+position = Vector2( 696.725, 2946.64 )
+rotation = 2.83878
+texture = ExtResource( 7 )
+
+[node name="puddle_small17" type="Sprite" parent="paredes"]
+position = Vector2( 1039.6, 2813.3 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small27" type="Sprite" parent="paredes"]
+position = Vector2( 1877.75, 2813.3 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small36" type="Sprite" parent="paredes"]
+position = Vector2( 2214.28, 2813.3 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small37" type="Sprite" parent="paredes"]
+position = Vector2( 2569.86, 2813.3 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small41" type="Sprite" parent="paredes"]
+position = Vector2( 2988.93, 2235.49 )
+rotation = 0.00113664
+texture = ExtResource( 7 )
+
+[node name="puddle_small43" type="Sprite" parent="paredes"]
+position = Vector2( 2938.14, 2813.3 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small78" type="Sprite" parent="paredes"]
+position = Vector2( 1858.7, 1664.02 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small79" type="Sprite" parent="paredes"]
+position = Vector2( 2214.28, 1664.02 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small80" type="Sprite" parent="paredes"]
+position = Vector2( 2582.56, 1664.02 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small81" type="Sprite" parent="paredes"]
+position = Vector2( 2880.99, 1664.02 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small82" type="Sprite" parent="paredes"]
+position = Vector2( 3236.57, 1664.02 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small83" type="Sprite" parent="paredes"]
+position = Vector2( 3617.54, 1664.02 )
+rotation = 3.15035
+texture = ExtResource( 7 )
+
+[node name="puddle_small44" type="Sprite" parent="paredes"]
+position = Vector2( 3192.12, 2540.27 )
+rotation = 1.55857
+texture = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( -898.727, 2639.82 )
+
+[node name="UI" parent="." instance=ExtResource( 1 )]
+
+[node name="mushroom_small" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1789.15, 1702.12 )
+
+[node name="mushroom_big" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1090.69, 641.735 )
+
+[node name="grass" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1046.24, 2356.13 )
+
+[node name="grass4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -766.859, 2330.73 )
+
+[node name="grass2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1071.64, 2864.1 )
+
+[node name="grass3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -830.355, 2933.94 )
