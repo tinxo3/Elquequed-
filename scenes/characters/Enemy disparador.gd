@@ -26,16 +26,16 @@ func _on_Area2D_body_exited(body):
 	player = null
 
 
-func fire():
-	var bullet = BULLET_SCENE.instance()
-	bullet.position = get_global_position()
-	bullet.player = player
-	get_parent().add_child(bullet)
-	$Timer.set_wait_tme(1)
-
-func _on_Timer_timeout():
-	if player != null:
-		fire()
+#func fire():
+#	var bullet = BULLET_SCENE.instance()
+#	bullet.position = get_global_position()
+#	bullet.player = player
+#	get_parent().add_child(bullet)
+#	$Timer.set_wait_tme(1)
+#
+#func _on_Timer_timeout():
+#	if player != null:
+#		fire()
 
 
 

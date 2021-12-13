@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/Enemy disparador.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/props/puddle_small.png" type="Texture" id=7]
+[ext_resource path="res://scenes/props/puerta.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 758.078, 10 )
@@ -1106,10 +1107,15 @@ position = Vector2( -1046.24, 2356.13 )
 position = Vector2( -766.859, 2330.73 )
 
 [node name="grass2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1071.64, 2864.1 )
+position = Vector2( -718, 2921 )
 
 [node name="grass3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -830.355, 2933.94 )
+position = Vector2( -495, 2918 )
 
 [node name="Enemy Disparador" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1438, 1424 )
+
+[node name="puerta" parent="." instance=ExtResource( 8 )]
+position = Vector2( -1054, 2567 )
+scale = Vector2( 0.487, 0.501 )
+next_scene_path = "res://scenes/levels/Outside.tscn"
