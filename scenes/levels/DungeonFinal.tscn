@@ -957,11 +957,11 @@ shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="paredes"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 571.464, 2124.81 )
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 682.582, 2134.33 )
 rotation = -2.93089
 scale = Vector2( 1.43926, 1.53102 )
-shape = SubResource( 4 )
+polygon = PoolVector2Array( 342.31, -40.241, 69.4831, -89.2937, -60.6896, -116.135, -235.562, -91.5784, -334.326, -69.6005, -295.698, 30.7811 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
 position = Vector2( 3939.66, 1129.93 )

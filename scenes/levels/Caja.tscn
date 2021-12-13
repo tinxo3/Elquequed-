@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/misc/ItemSpawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/levels/Area2D.gd" type="Script" id=2]
@@ -115,9 +115,24 @@ tracks/2/keys = {
 "method": "_despawn"
 } ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("../StaticBody2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 18.5799, 5.01025 )
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 43, 39 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 57, 53 )
 
 [node name="Caja" type="Node2D"]
 position = Vector2( -1, 2 )
@@ -128,11 +143,10 @@ collision_mask = 32
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Areacaja"]
-position = Vector2( 398.626, 186.652 )
+position = Vector2( 3.62604, -1.34799 )
 scale = Vector2( 0.996658, 0.929538 )
 frames = SubResource( 1 )
 animation = "Caja"
-frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Areacaja"]
 autoplay = "Caja hp 10"
@@ -142,14 +156,19 @@ autoplay = "Caja hp 10"
 "anims/Caja hp 7" = SubResource( 5 )
 anims/Destroy = SubResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Areacaja"]
-position = Vector2( 395.815, 187.602 )
-scale = Vector2( -2.37202, -8.84164 )
-shape = SubResource( 7 )
-
 [node name="item_spawner" parent="Areacaja" instance=ExtResource( 1 )]
 visible = false
-position = Vector2( 396, 188 )
+position = Vector2( -2, -4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areacaja"]
+position = Vector2( -7, -4 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -8, -4 )
+shape = SubResource( 8 )
 
 [connection signal="area_entered" from="Areacaja" to="Areacaja" method="_on_Area2D_area_entered"]
 [connection signal="animation_started" from="Areacaja/AnimationPlayer" to="Areacaja" method="_on_AnimationPlayer_animation_started"]

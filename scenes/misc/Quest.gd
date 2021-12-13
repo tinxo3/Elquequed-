@@ -1,5 +1,5 @@
 extends Node
-
+onready var anims = "../../../piedra abre/AnimationPlayer"
 """
 Instance this as a child of any Npc.tscn node and it turns into a 
 quest giver.
@@ -38,3 +38,7 @@ func process() -> String:
 				return pending_text
 		_:
 			return ""
+#func missioncompleted():
+	#if Quest.get_status("MERCAAAAA") == Quest.STATUS.COMPLETE:
+		#anims.play("abierta")
+

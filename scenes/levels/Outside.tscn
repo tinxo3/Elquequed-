@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=2]
@@ -16,9 +16,86 @@
 [ext_resource path="res://scenes/misc/Quest.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/levels/Caja.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/props/puerta.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/levels/piedraabre.gd" type="Script" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 70.2834, 110.451 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 318.349, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 496.912, 342.711 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "abierta"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("puddle_big4:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Area2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ null ],
+"method": "_on_Area2D_body_entered"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "reset"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("puddle_big4:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2771, 26.7571 )
@@ -26,7 +103,7 @@ extents = Vector2( 2771, 26.7571 )
 [node name="Outside" type="Node"]
 
 [node name="puerta" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3571, 1494 )
+position = Vector2( 3603.61, 1378.19 )
 scale = Vector2( 0.600001, 0.600001 )
 next_scene_path = "res://scenes/levels/DungeonFinal.tscn"
 
@@ -35,7 +112,7 @@ position = Vector2( -6411.49, -2537.56 )
 scale = Vector2( 1.66666, 1.66666 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="puerta/staticbody"]
-position = Vector2( -574.205, 1863.47 )
+position = Vector2( -603.571, 1863.47 )
 scale = Vector2( 1, 16.28 )
 shape = SubResource( 1 )
 
@@ -76,6 +153,71 @@ position = Vector2( 3826.58, 880.255 )
 rotation = 1.5708
 scale = Vector2( 0.964766, 0.929766 )
 texture = ExtResource( 11 )
+
+[node name="pared puerta" type="Sprite" parent="."]
+position = Vector2( 3598.51, 1054.87 )
+rotation = -0.0114258
+scale = Vector2( 0.964766, 0.929766 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small45" type="Sprite" parent="pared puerta"]
+position = Vector2( -317.85, 686.178 )
+rotation = -3.12611
+scale = Vector2( 1.00001, 0.999992 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small44" type="Sprite" parent="pared puerta"]
+position = Vector2( -11.2896, 689.813 )
+rotation = -3.12611
+scale = Vector2( 1.00001, 0.999992 )
+texture = ExtResource( 11 )
+
+[node name="puddle_small46" type="Sprite" parent="pared puerta"]
+position = Vector2( -265.932, -3.15283 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+
+[node name="Piedra puerta" type="StaticBody2D" parent="."]
+position = Vector2( 3598.51, 1054.87 )
+rotation = -0.0114258
+scale = Vector2( 0.964766, 0.929766 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piedra puerta"]
+position = Vector2( -144.299, 21.2871 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Piedra puerta"]
+position = Vector2( -143.96, 661.408 )
+shape = SubResource( 3 )
+
+[node name="piedraabre" type="StaticBody2D" parent="."]
+position = Vector2( 3145.93, 1240.18 )
+rotation = -1.58812
+scale = Vector2( 0.964766, 0.929766 )
+script = ExtResource( 19 )
+
+[node name="Area2D" type="Area2D" parent="piedraabre"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piedraabre/Area2D"]
+position = Vector2( -151.485, 1.10938 )
+shape = SubResource( 6 )
+
+[node name="animacion" type="AnimationPlayer" parent="piedraabre"]
+autoplay = "reset"
+anims/abierta = SubResource( 4 )
+anims/reset = SubResource( 5 )
+
+[node name="puddle_big4" type="Sprite" parent="piedraabre"]
+position = Vector2( -163.881, 53.9712 )
+rotation = 0.0169087
+scale = Vector2( 1.03653, 1.07553 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piedraabre"]
+position = Vector2( -144.299, 21.2871 )
+scale = Vector2( 0.987183, -1.43888 )
+shape = SubResource( 3 )
 
 [node name="puddle_small8" type="Sprite" parent="."]
 position = Vector2( 2446.31, -53.1263 )
@@ -284,7 +426,7 @@ scale = Vector2( 0.964766, 0.929766 )
 texture = ExtResource( 11 )
 
 [node name="puddle_small2" type="Sprite" parent="."]
-position = Vector2( 3381.63, 927.58 )
+position = Vector2( 3274.72, 777.909 )
 scale = Vector2( 0.995735, 0.995735 )
 texture = ExtResource( 11 )
 
@@ -310,7 +452,7 @@ pending_text = "Y? Ya se fueron todos?"
 delivered_text = "Gracias por hacerme la gauchada, toma, la del diegote..."
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
-position = Vector2( -773.794, 1078.99 )
+position = Vector2( 2406.75, 628.792 )
 
 [node name="cartoon-image-of-wine-bottle-vector-15676017" type="Sprite" parent="level"]
 position = Vector2( -491.732, 1108.11 )
@@ -319,7 +461,7 @@ scale = Vector2( 0.11015, 0.11015 )
 texture = ExtResource( 12 )
 
 [node name="cartoon-image-of-wine-bottle-vector-15676019" type="Sprite" parent="level"]
-position = Vector2( 2614.86, 709.814 )
+position = Vector2( 3320.88, 1034.51 )
 rotation = -1.0935
 scale = Vector2( -0.110564, -0.110564 )
 texture = ExtResource( 12 )
@@ -364,7 +506,9 @@ texture = ExtResource( 12 )
 position = Vector2( 3054.12, 406.509 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
-[node name="house_outside" type="Position2D" parent="level/house" groups=["spawnpoints"]]
+[node name="house_outside" type="Position2D" parent="level/house" groups=[
+"spawnpoints",
+]]
 position = Vector2( -2.12201, 173.199 )
 
 [node name="flower" parent="level" instance=ExtResource( 7 )]
@@ -406,9 +550,6 @@ position = Vector2( 2825.28, 615.975 )
 [node name="grass7" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 845.966, 1415.13 )
 
-[node name="grass30" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1423.78, 1326.24 )
-
 [node name="grass31" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 1677.76, 2024.69 )
 
@@ -422,13 +563,13 @@ position = Vector2( 962.45, 546.003 )
 position = Vector2( 532.892, 1026.59 )
 
 [node name="grass11" parent="level" instance=ExtResource( 3 )]
-position = Vector2( -858.304, 773.203 )
+position = Vector2( -911.698, 753.18 )
 
 [node name="grass33" parent="level" instance=ExtResource( 3 )]
 position = Vector2( -1550.41, 601.764 )
 
 [node name="grass34" parent="level" instance=ExtResource( 3 )]
-position = Vector2( -1410.72, 1090.68 )
+position = Vector2( -1400.04, 1090.68 )
 
 [node name="grass35" parent="level" instance=ExtResource( 3 )]
 position = Vector2( -1531.36, 2074.87 )
@@ -488,7 +629,7 @@ position = Vector2( -798.536, 1680.72 )
 position = Vector2( 338.259, 2067.46 )
 
 [node name="grass22" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2779.13, 1490.11 )
+position = Vector2( 2650.84, 1329.75 )
 
 [node name="grass23" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 2683.09, 2374.78 )
@@ -503,7 +644,7 @@ position = Vector2( 3017.5, 2734.68 )
 position = Vector2( 3260.4, 2733.52 )
 
 [node name="grass24" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2271.52, 1095.64 )
+position = Vector2( 2120.5, 974.824 )
 
 [node name="grass13" parent="level" instance=ExtResource( 3 )]
 position = Vector2( -151.338, 1671.43 )
@@ -530,7 +671,7 @@ position = Vector2( 909.861, 2408.58 )
 position = Vector2( 2677.42, 1756.06 )
 
 [node name="enemy3" parent="level" instance=ExtResource( 4 )]
-position = Vector2( -349.956, 1073.44 )
+position = Vector2( -339.277, 1068.1 )
 
 [node name="enemy4" parent="level" instance=ExtResource( 4 )]
 position = Vector2( 144.826, 2058.43 )
@@ -545,12 +686,12 @@ position = Vector2( 144.914, 746.878 )
 position = Vector2( 1766.1, 666.819 )
 
 [node name="enemy8" parent="level" instance=ExtResource( 4 )]
-position = Vector2( 2446.6, 633.461 )
+position = Vector2( 3379.15, 977.031 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [node name="puddle_big" type="Sprite" parent="."]
-position = Vector2( 3897.17, 1418.13 )
+position = Vector2( 3915.13, 1386.7 )
 rotation = 1.5708
 texture = ExtResource( 10 )
 
@@ -564,9 +705,10 @@ stream = ExtResource( 6 )
 autoplay = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -413.254, 594.683 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1210.89, 13.4543 )
+position = Vector2( 1593.91, -591.308 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -577,6 +719,8 @@ position = Vector2( 1210.89, 13.4543 )
 shape = SubResource( 2 )
 
 [node name="Caja" parent="." instance=ExtResource( 15 )]
-position = Vector2( -813.559, 378.683 )
+position = Vector2( -237.235, 689.156 )
+z_as_relative = false
 
 [connection signal="body_entered" from="puerta" to="puerta" method="_on_puerta_body_entered"]
+[connection signal="body_entered" from="piedraabre/Area2D" to="piedraabre" method="_on_Area2D_body_entered"]
