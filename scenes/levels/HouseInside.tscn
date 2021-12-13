@@ -46,7 +46,7 @@ required_amount = 1
 reward_item = "un g"
 initial_text = "DME LA DEL DIEGOTEE LA TIENEH EL JORJITO!!!!! "
 pending_text = "ME AGARRA LA ASTINENSIA DALEEEE"
-delivered_text = "UUU Q RICA GARSIAS"
+delivered_text = "UUU Q RICA GARSIAS. AORA PODE SALIR X LA PUERTA JEJE Y SINO POR DONDE.. SI NO TENE LA LLAVE BUCALA EN LA CAJA ESA DE POR AY. NOS VEMO CUMPA"
 
 [node name="Dadbug" parent="house_inside" instance=ExtResource( 8 )]
 visible = false

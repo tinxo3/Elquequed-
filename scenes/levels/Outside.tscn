@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=2]
@@ -14,9 +14,14 @@
 [ext_resource path="res://textures/cartoon-image-of-wine-bottle-vector-15676016.png" type="Texture" id=12]
 [ext_resource path="res://scenes/characters/Npc.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/misc/Quest.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/levels/Caja.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/props/puerta.tscn" type="PackedScene" id=16]
+[ext_resource path="res://textures/caja 7 hp.png" type="Texture" id=17]
+[ext_resource path="res://textures/caja 10 hp.png" type="Texture" id=18]
 [ext_resource path="res://scenes/levels/piedraabre.gd" type="Script" id=19]
+[ext_resource path="res://textures/caja 0 hp.png" type="Texture" id=20]
+[ext_resource path="res://textures/caja 4 hp.png" type="Texture" id=21]
+[ext_resource path="res://scenes/levels/Area2D.gd" type="Script" id=22]
+[ext_resource path="res://scenes/misc/ItemSpawner.gd" type="Script" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 70.2834, 110.451 )
@@ -99,6 +104,133 @@ tracks/1/keys = {
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2771, 26.7571 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Caja",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=11]
+resource_name = "Caja hp 0"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "Caja hp 10"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Caja hp 4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Caja hp 7"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Destroy"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_despawn"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../StaticBody2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 43, 39 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 57, 53 )
 
 [node name="Outside" type="Node"]
 
@@ -425,11 +557,6 @@ rotation = 0.311595
 scale = Vector2( 0.964766, 0.929766 )
 texture = ExtResource( 11 )
 
-[node name="puddle_small2" type="Sprite" parent="."]
-position = Vector2( 3274.72, 777.909 )
-scale = Vector2( 0.995735, 0.995735 )
-texture = ExtResource( 11 )
-
 [node name="puddle_big2" type="Sprite" parent="."]
 position = Vector2( 1262.69, 1568.61 )
 scale = Vector2( 1.97507, 1.97507 )
@@ -449,7 +576,7 @@ required_amount = 6
 reward_item = "La del diegote"
 initial_text = "Eh vos! Seguro ya te cruzaste a alguno de esos vagos, están por todos lados jodiendo y escabiando, si me haces el favor de darles una leccion tengo algo para vos. Ojo que andan armados eh..."
 pending_text = "Y? Ya se fueron todos?"
-delivered_text = "Gracias por hacerme la gauchada, toma, la del diegote..."
+delivered_text = "Gracias por hacerme la gauchada, toma, pero tengo otra cosa para pedirte"
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
 position = Vector2( 2406.75, 628.792 )
@@ -718,9 +845,128 @@ position = Vector2( 470.902, 3054.14 )
 position = Vector2( 1210.89, 13.4543 )
 shape = SubResource( 2 )
 
-[node name="Caja" parent="." instance=ExtResource( 15 )]
-position = Vector2( -237.235, 689.156 )
+[node name="Caja" type="Node2D" parent="."]
+position = Vector2( -314.818, 577.224 )
 z_as_relative = false
+
+[node name="Areacaja" type="Area2D" parent="Caja"]
+position = Vector2( 0, -1 )
+collision_mask = 32
+script = ExtResource( 22 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Caja/Areacaja"]
+position = Vector2( 3.62604, -1.34799 )
+scale = Vector2( 0.996658, 0.929538 )
+frames = SubResource( 10 )
+animation = "Caja"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Caja/Areacaja"]
+autoplay = "Caja hp 10"
+"anims/Caja hp 0" = SubResource( 11 )
+"anims/Caja hp 10" = SubResource( 12 )
+"anims/Caja hp 4" = SubResource( 13 )
+"anims/Caja hp 7" = SubResource( 14 )
+anims/Destroy = SubResource( 15 )
+
+[node name="item_spawner" type="Position2D" parent="Caja/Areacaja"]
+visible = false
+position = Vector2( -2, -4 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja/Areacaja"]
+position = Vector2( -7, -4 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Caja"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja/StaticBody2D"]
+position = Vector2( -8, -4 )
+shape = SubResource( 8 )
+
+[node name="Caja3" type="Node2D" parent="."]
+position = Vector2( -149.834, 462.562 )
+z_as_relative = false
+
+[node name="Areacaja" type="Area2D" parent="Caja3"]
+position = Vector2( 0, -1 )
+collision_mask = 32
+script = ExtResource( 22 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Caja3/Areacaja"]
+position = Vector2( 3.62604, -1.34799 )
+scale = Vector2( 0.996658, 0.929538 )
+frames = SubResource( 10 )
+animation = "Caja"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Caja3/Areacaja"]
+autoplay = "Caja hp 10"
+"anims/Caja hp 0" = SubResource( 11 )
+"anims/Caja hp 10" = SubResource( 12 )
+"anims/Caja hp 4" = SubResource( 13 )
+"anims/Caja hp 7" = SubResource( 14 )
+anims/Destroy = SubResource( 15 )
+
+[node name="item_spawner" type="Position2D" parent="Caja3/Areacaja"]
+visible = false
+position = Vector2( -2, -4 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja3/Areacaja"]
+position = Vector2( -7, -4 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Caja3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja3/StaticBody2D"]
+position = Vector2( -8, -4 )
+shape = SubResource( 8 )
+
+[node name="Caja4" type="Node2D" parent="."]
+position = Vector2( -457.538, 460.674 )
+z_as_relative = false
+
+[node name="Areacaja" type="Area2D" parent="Caja4"]
+position = Vector2( 0, -1 )
+collision_mask = 32
+script = ExtResource( 22 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Caja4/Areacaja"]
+position = Vector2( 3.62604, -1.34799 )
+scale = Vector2( 0.996658, 0.929538 )
+frames = SubResource( 10 )
+animation = "Caja"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Caja4/Areacaja"]
+autoplay = "Caja hp 10"
+"anims/Caja hp 0" = SubResource( 11 )
+"anims/Caja hp 10" = SubResource( 12 )
+"anims/Caja hp 4" = SubResource( 13 )
+"anims/Caja hp 7" = SubResource( 14 )
+anims/Destroy = SubResource( 15 )
+
+[node name="item_spawner" type="Position2D" parent="Caja4/Areacaja"]
+visible = false
+position = Vector2( -2, -4 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja4/Areacaja"]
+position = Vector2( -7, -4 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Caja4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caja4/StaticBody2D"]
+position = Vector2( -8, -4 )
+shape = SubResource( 8 )
 
 [connection signal="body_entered" from="puerta" to="puerta" method="_on_puerta_body_entered"]
 [connection signal="body_entered" from="piedraabre/Area2D" to="piedraabre" method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Caja/Areacaja" to="Caja/Areacaja" method="_on_Area2D_area_entered"]
+[connection signal="animation_started" from="Caja/Areacaja/AnimationPlayer" to="Caja/Areacaja" method="_on_AnimationPlayer_animation_started"]
+[connection signal="visibility_changed" from="Caja/Areacaja/item_spawner" to="Caja/Areacaja" method="_on_item_spawner_visibility_changed"]
+[connection signal="area_entered" from="Caja3/Areacaja" to="Caja3/Areacaja" method="_on_Area2D_area_entered"]
+[connection signal="animation_started" from="Caja3/Areacaja/AnimationPlayer" to="Caja3/Areacaja" method="_on_AnimationPlayer_animation_started"]
+[connection signal="visibility_changed" from="Caja3/Areacaja/item_spawner" to="Caja3/Areacaja" method="_on_item_spawner_visibility_changed"]
+[connection signal="area_entered" from="Caja4/Areacaja" to="Caja4/Areacaja" method="_on_Area2D_area_entered"]
+[connection signal="animation_started" from="Caja4/Areacaja/AnimationPlayer" to="Caja4/Areacaja" method="_on_AnimationPlayer_animation_started"]
+[connection signal="visibility_changed" from="Caja4/Areacaja/item_spawner" to="Caja4/Areacaja" method="_on_item_spawner_visibility_changed"]
