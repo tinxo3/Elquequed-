@@ -4,7 +4,7 @@ onready var BULLET_SCENE = preload("res://scenes/levels/Bullet.tscn")
 
 var player = null
 var move = Vector2.ZERO
-var speed = 1
+var speed = 0
 export (int) var hp 
 
 func _physics_process(delta):
