@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/Enemy disparador.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/characters/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/props/puddle_small.png" type="Texture" id=7]
 [ext_resource path="res://scenes/props/puerta.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/props/Flower.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 758.078, 10 )
@@ -1119,3 +1120,152 @@ position = Vector2( 1438, 1424 )
 position = Vector2( -1054, 2567 )
 scale = Vector2( 0.487, 0.501 )
 next_scene_path = "res://scenes/levels/Outside.tscn"
+
+[node name="grass5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3447.84, 2660.49 )
+
+[node name="grass6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3225.6, 3117.66 )
+
+[node name="grass7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1934.51, 3214.67 )
+
+[node name="grass8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1813.86, 2135.24 )
+
+[node name="grass9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2639.31, 2046.35 )
+
+[node name="grass10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3293.32, 2217.79 )
+
+[node name="mushroom_big2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 854.632, 3511.89 )
+
+[node name="mushroom_small3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1915.02, 1016.49 )
+
+[node name="flower" parent="." instance=ExtResource( 9 )]
+position = Vector2( 784.786, 1949.89 )
+
+[node name="mushroom_small2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5261.26, 1187.93 )
+rotation = 0.336242
+scale = Vector2( 1, 1 )
+
+[node name="mushroom_small4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4651.7, 1130.79 )
+
+[node name="flower2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 784.786, 1949.89 )
+
+[node name="mushroom_big3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4899.33, 3734.12 )
+
+[node name="grass11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3293.32, 2217.79 )
+
+[node name="grass12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1511.21, 996.889 )
+
+[node name="grass13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2260.46, 958.791 )
+
+[node name="grass14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2901.77, 1015.94 )
+
+[node name="grass15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4324.08, 1085.78 )
+
+[node name="grass16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4978.09, 1212.78 )
+
+[node name="grass19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5117.79, 304.781 )
+
+[node name="grass20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6165.47, -126.992 )
+
+[node name="grass21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7492.54, -88.8945 )
+
+[node name="grass22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10318.1, 425.424 )
+
+[node name="grass23" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9029.14, -514.318 )
+
+[node name="mushroom_big4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7128.33, 3149.96 )
+
+[node name="grass24" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8451.33, -82.5449 )
+
+[node name="grass17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3358.94, 761.953 )
+
+[node name="grass18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4520.92, 1250.87 )
+
+[node name="grass25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6968.24, 1634.3 )
+
+[node name="grass26" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7093.96, 2011.45 )
+
+[node name="grass27" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6213.95, 2209.01 )
+
+[node name="grass28" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4795.16, 2424.52 )
+
+[node name="flower" parent="grass28" instance=ExtResource( 9 )]
+position = Vector2( 2503.64, -166.148 )
+
+[node name="mushroom_small" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( -2188.29, 735.293 )
+
+[node name="grass29" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4795.16, 2424.52 )
+
+[node name="flower" parent="grass29" instance=ExtResource( 9 )]
+position = Vector2( 2503.64, -166.148 )
+
+[node name="mushroom_small" parent="grass29" instance=ExtResource( 3 )]
+position = Vector2( -2497.74, -408.326 )
+
+[node name="mushroom_small2" parent="grass29" instance=ExtResource( 3 )]
+position = Vector2( -1179.21, -408.326 )
+
+[node name="grass" parent="grass29/mushroom_small2" instance=ExtResource( 4 )]
+position = Vector2( -2206.51, 2272.78 )
+
+[node name="mushroom_small3" parent="grass29" instance=ExtResource( 3 )]
+position = Vector2( -1179.21, -408.326 )
+
+[node name="grass" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( -914.894, 2488.05 )
+
+[node name="grass2" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 1076.35, 2057.51 )
+
+[node name="grass3" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 3013.77, 3026.22 )
+
+[node name="grass4" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 4238.12, 2837.86 )
+
+[node name="grass5" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 5893, 3012.77 )
+
+[node name="grass6" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 7009.71, 1801.88 )
+
+[node name="grass7" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 7372.98, 523.716 )
+
+[node name="grass8" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 6713.72, -579.54 )
+
+[node name="grass9" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 6875.17, 523.716 )

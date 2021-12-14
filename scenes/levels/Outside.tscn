@@ -235,9 +235,12 @@ extents = Vector2( 57, 53 )
 [node name="Outside" type="Node"]
 
 [node name="puerta" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3603.61, 1378.19 )
+position = Vector2( 3603.61, 1372.85 )
 scale = Vector2( 0.600001, 0.600001 )
 next_scene_path = "res://scenes/levels/DungeonFinal.tscn"
+
+[node name="Sprite" parent="puerta" index="0"]
+visible = false
 
 [node name="staticbody" type="StaticBody2D" parent="puerta"]
 position = Vector2( -6411.49, -2537.56 )
@@ -574,7 +577,7 @@ required_amount = 6
 reward_item = "La del diegote"
 initial_text = "Eh vos! Seguro ya te cruzaste a alguno de esos vagos, están por todos lados jodiendo y escabiando, si me haces el favor de darles una leccion tengo algo para vos. Ojo que andan armados eh..."
 pending_text = "Y? Ya se fueron todos?"
-delivered_text = "Gracias por hacerme la gauchada, toma, pero tengo otra cosa para pedirte"
+delivered_text = "Gracias por hacerme la gauchada, toma, la del diegote..."
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
 position = Vector2( -802.211, 1018.57 )
@@ -816,7 +819,7 @@ position = Vector2( 3379.15, 977.031 )
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
 [node name="puddle_big" type="Sprite" parent="."]
-position = Vector2( 3915.13, 1386.7 )
+position = Vector2( 4684, 2155.57 )
 rotation = 1.5708
 texture = ExtResource( 10 )
 
@@ -970,3 +973,5 @@ shape = SubResource( 14 )
 [connection signal="area_entered" from="Caja4/Areacaja" to="Caja4/Areacaja" method="_on_Area2D_area_entered"]
 [connection signal="animation_started" from="Caja4/Areacaja/AnimationPlayer" to="Caja4/Areacaja" method="_on_AnimationPlayer_animation_started"]
 [connection signal="visibility_changed" from="Caja4/Areacaja/item_spawner" to="Caja4/Areacaja" method="_on_item_spawner_visibility_changed"]
+
+[editable path="puerta"]
