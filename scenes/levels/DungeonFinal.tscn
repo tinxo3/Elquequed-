@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/Enemy disparador.tscn" type="PackedScene" id=2]
@@ -9,18 +9,27 @@
 [ext_resource path="res://textures/props/puddle_small.png" type="Texture" id=7]
 [ext_resource path="res://scenes/props/puerta.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/props/Flower.tscn" type="PackedScene" id=9]
+[ext_resource path="res://music/Music Lino/Enemigos Final.mp3" type="AudioStream" id=10]
+[ext_resource path="res://scenes/characters/Enemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/levels/puertafinal.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 758.078, 10 )
+extents = Vector2( 699.859, 23.3233 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1516.29, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 386.125, 32.647 )
+extents = Vector2( 344.483, 78.2691 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 396.383, 90.3586 )
+extents = Vector2( 373.722, 73.9643 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 186.625, 80.875 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 183.5, 117.5 )
 
 [node name="DungeonFinal" type="Node"]
 
@@ -37,7 +46,7 @@ rotation = 3.1404
 texture = ExtResource( 7 )
 
 [node name="puddle_small94" type="Sprite" parent="paredes"]
-position = Vector2( 5400.65, 3160.99 )
+position = Vector2( 5400.96, 3290.66 )
 rotation = 3.1404
 texture = ExtResource( 7 )
 
@@ -147,8 +156,9 @@ rotation = -1.5708
 texture = ExtResource( 7 )
 
 [node name="puddle_small20" type="Sprite" parent="paredes"]
-position = Vector2( 1211.04, 1441.79 )
+position = Vector2( 1211.04, 1382.46 )
 rotation = -1.5708
+scale = Vector2( 1.21653, 1 )
 texture = ExtResource( 7 )
 
 [node name="puddle_small97" type="Sprite" parent="paredes"]
@@ -157,15 +167,16 @@ rotation = -1.5708
 texture = ExtResource( 7 )
 
 [node name="puddle_small21" type="Sprite" parent="paredes"]
-position = Vector2( 1217.39, 3607 )
+position = Vector2( 1218.41, 3704.53 )
 rotation = -1.58127
+scale = Vector2( 1.35597, 1 )
 texture = ExtResource( 7 )
 
 [node name="Enemy Disparador" parent="paredes" instance=ExtResource( 2 )]
-position = Vector2( -83, 2502 )
+position = Vector2( 1491, 2548 )
 
 [node name="puddle_small24" type="Sprite" parent="paredes"]
-position = Vector2( 1401.53, 3873.68 )
+position = Vector2( 1421, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
@@ -205,17 +216,17 @@ rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small31" type="Sprite" parent="paredes"]
-position = Vector2( 1744.41, 3873.68 )
+position = Vector2( 1763.88, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small32" type="Sprite" parent="paredes"]
-position = Vector2( 2099.99, 3873.68 )
+position = Vector2( 2119.46, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small33" type="Sprite" parent="paredes"]
-position = Vector2( 2468.27, 3873.68 )
+position = Vector2( 2487.74, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
@@ -240,7 +251,7 @@ rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small96" type="Sprite" parent="paredes"]
-position = Vector2( 5371.12, 1402.07 )
+position = Vector2( 5371, 1321.5 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
@@ -295,8 +306,9 @@ rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small65" type="Sprite" parent="paredes"]
-position = Vector2( 4436.64, 2603.76 )
+position = Vector2( 4488.97, 2603.76 )
 rotation = 6.28319
+scale = Vector2( 0.809032, 1 )
 texture = ExtResource( 7 )
 
 [node name="puddle_small66" type="Sprite" parent="paredes"]
@@ -320,38 +332,39 @@ rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small47" type="Sprite" parent="paredes"]
-position = Vector2( 2842.89, 3873.68 )
+position = Vector2( 2862.36, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small48" type="Sprite" parent="paredes"]
-position = Vector2( 3185.77, 3873.68 )
+position = Vector2( 3205.24, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small49" type="Sprite" parent="paredes"]
-position = Vector2( 3484.2, 3873.68 )
+position = Vector2( 3503.67, 4063.85 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small62" type="Sprite" parent="paredes"]
-position = Vector2( 4455.69, 3149.83 )
+position = Vector2( 4456, 3279.5 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small63" type="Sprite" parent="paredes"]
-position = Vector2( 4798.57, 3149.83 )
+position = Vector2( 4798.88, 3279.5 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small64" type="Sprite" parent="paredes"]
-position = Vector2( 5097, 3149.83 )
+position = Vector2( 5097.31, 3279.5 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small86" type="Sprite" parent="paredes"]
-position = Vector2( 4455.69, 1943.4 )
+position = Vector2( 4486.61, 1943.4 )
 rotation = 3.14159
+scale = Vector2( 0.887155, 1 )
 texture = ExtResource( 7 )
 
 [node name="puddle_small87" type="Sprite" parent="paredes"]
@@ -435,17 +448,17 @@ rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small50" type="Sprite" parent="paredes"]
-position = Vector2( 3839.78, 3867.33 )
+position = Vector2( 3859.25, 4057.5 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small51" type="Sprite" parent="paredes"]
-position = Vector2( 4138.21, 3867.33 )
+position = Vector2( 4157.68, 4057.5 )
 rotation = 3.14159
 texture = ExtResource( 7 )
 
 [node name="puddle_small67" type="Sprite" parent="paredes"]
-position = Vector2( 1401.53, 1175.1 )
+position = Vector2( 1427, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
@@ -455,52 +468,52 @@ rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small68" type="Sprite" parent="paredes"]
-position = Vector2( 1744.41, 1175.1 )
+position = Vector2( 1769.88, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small69" type="Sprite" parent="paredes"]
-position = Vector2( 2099.99, 1175.1 )
+position = Vector2( 2125.46, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small70" type="Sprite" parent="paredes"]
-position = Vector2( 2468.27, 1175.1 )
+position = Vector2( 2493.74, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small71" type="Sprite" parent="paredes"]
-position = Vector2( 2842.89, 1175.1 )
+position = Vector2( 2868.36, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small72" type="Sprite" parent="paredes"]
-position = Vector2( 3185.77, 1175.1 )
+position = Vector2( 3211.24, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small73" type="Sprite" parent="paredes"]
-position = Vector2( 3484.2, 1175.1 )
+position = Vector2( 3509.67, 1060.85 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small74" type="Sprite" parent="paredes"]
-position = Vector2( 3839.78, 1168.75 )
+position = Vector2( 3865.25, 1054.5 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small89" type="Sprite" parent="paredes"]
-position = Vector2( 4423.94, 1410.04 )
-rotation = 6.28319
+position = Vector2( 4464, 1322 )
+rotation = 6.28318
 texture = ExtResource( 7 )
 
 [node name="puddle_small90" type="Sprite" parent="paredes"]
-position = Vector2( 4754.12, 1410.04 )
+position = Vector2( 4754, 1329.47 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small91" type="Sprite" parent="paredes"]
-position = Vector2( 5097, 1410.04 )
+position = Vector2( 5096.88, 1329.47 )
 rotation = 6.28319
 texture = ExtResource( 7 )
 
@@ -555,7 +568,7 @@ rotation = 6.28319
 texture = ExtResource( 7 )
 
 [node name="puddle_small75" type="Sprite" parent="paredes"]
-position = Vector2( 4163.61, 1289.4 )
+position = Vector2( 4240, 1213 )
 rotation = 6.66181
 texture = ExtResource( 7 )
 
@@ -645,12 +658,12 @@ rotation = -1.58127
 texture = ExtResource( 7 )
 
 [node name="puddle_small60" type="Sprite" parent="paredes"]
-position = Vector2( 4316, 2387.88 )
+position = Vector2( 4411.5, 2426.23 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
 [node name="puddle_small85" type="Sprite" parent="paredes"]
-position = Vector2( 4316, 2038.65 )
+position = Vector2( 4411.5, 2077 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
@@ -675,7 +688,7 @@ rotation = -1.5735
 texture = ExtResource( 7 )
 
 [node name="puddle_small25" type="Sprite" parent="paredes"]
-position = Vector2( 1680.91, 3283.17 )
+position = Vector2( 1777.5, 3277.28 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
@@ -770,27 +783,29 @@ rotation = 1.5708
 texture = ExtResource( 7 )
 
 [node name="puddle_small26" type="Sprite" parent="paredes"]
-position = Vector2( 1680.91, 2914.89 )
+position = Vector2( 1777.5, 2909 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
 [node name="puddle_small52" type="Sprite" parent="paredes"]
-position = Vector2( 4347.75, 3619.7 )
+position = Vector2( 4347.75, 3775.13 )
 rotation = 1.5708
+scale = Vector2( 1.09243, 1 )
 texture = ExtResource( 7 )
 
 [node name="puddle_small53" type="Sprite" parent="paredes"]
-position = Vector2( 4347.75, 3251.42 )
+position = Vector2( 4347.75, 3350.42 )
 rotation = 1.5708
+scale = Vector2( 1.03097, 1 )
 texture = ExtResource( 7 )
 
 [node name="puddle_small28" type="Sprite" parent="paredes"]
-position = Vector2( 1680.91, 2133.89 )
+position = Vector2( 1777.5, 2145.27 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
 [node name="puddle_small29" type="Sprite" parent="paredes"]
-position = Vector2( 1680.91, 1765.62 )
+position = Vector2( 1777.5, 1777 )
 rotation = 1.5708
 texture = ExtResource( 7 )
 
@@ -880,8 +895,9 @@ rotation = 3.15035
 texture = ExtResource( 7 )
 
 [node name="puddle_small98" type="Sprite" parent="paredes"]
-position = Vector2( 5532.88, 3285.92 )
+position = Vector2( 5532.88, 3342.49 )
 rotation = -1.5708
+scale = Vector2( 0.793545, 1 )
 texture = ExtResource( 7 )
 
 [node name="puddle_small44" type="Sprite" parent="paredes"]
@@ -900,7 +916,7 @@ position = Vector2( -459.185, 3054.11 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="paredes/StaticBody2D"]
-position = Vector2( 2338.64, 2701.72 )
+position = Vector2( 2396.86, 2711.68 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="paredes/StaticBody2D"]
@@ -908,53 +924,53 @@ position = Vector2( 2381.35, 2338.64 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="paredes/StaticBody2D"]
-position = Vector2( 4997.64, 3043.44 )
+position = Vector2( 4958, 3179 )
 scale = Vector2( 0.886896, -1.41156 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="paredes/StaticBody2D"]
-position = Vector2( 4933.57, 1505.7 )
+position = Vector2( 4933.57, 1404.5 )
 scale = Vector2( 0.87492, 1.68329 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="paredes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D2"]
-position = Vector2( 2677.41, 1278.16 )
+position = Vector2( 2660, 1155 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="paredes/StaticBody2D2"]
-position = Vector2( 2798.5, 3767.22 )
+position = Vector2( 2808, 3967 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="paredes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
-position = Vector2( 4251.57, 2273.78 )
+position = Vector2( 4392.77, 2265.6 )
 rotation = 1.5708
 scale = Vector2( 1.08641, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
-position = Vector2( 3094.5, 2529.42 )
+position = Vector2( 3137, 2529 )
 rotation = 1.5708
 scale = Vector2( 1.08641, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
-position = Vector2( 4278.48, 3471.22 )
+position = Vector2( 4318, 3542 )
 rotation = 1.5708
 scale = Vector2( 1.08641, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
-position = Vector2( 1601.07, 3094.5 )
+position = Vector2( 1764.59, 3093.11 )
 rotation = 1.5708
 scale = Vector2( 1.08641, 1 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="paredes/StaticBody2D3"]
-position = Vector2( 1627.97, 1977.79 )
+position = Vector2( 1741, 1948 )
 rotation = 1.5708
 scale = Vector2( 1.08641, 1 )
 shape = SubResource( 3 )
@@ -968,7 +984,7 @@ scale = Vector2( 1.43926, 1.53102 )
 polygon = PoolVector2Array( 342.31, -40.241, 69.4831, -89.2937, -60.6896, -116.135, -235.562, -91.5784, -334.326, -69.6005, -295.698, 30.7811 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 3939.66, 1129.93 )
+position = Vector2( 3965.13, 1015.68 )
 rotation = -2.57609
 scale = Vector2( 1.43926, 1.53102 )
 shape = SubResource( 4 )
@@ -980,19 +996,19 @@ scale = Vector2( 1.34343, -1.26372 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 7165.26, 863.251 )
+position = Vector2( 7165.23, 877.465 )
 rotation = -3.13976
 scale = Vector2( 1.34343, -1.26372 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 5527.06, 863.251 )
+position = Vector2( 5531.37, 830.52 )
 rotation = -1.59089
 scale = Vector2( 1.55341, -0.965369 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 5552.45, 3707.87 )
+position = Vector2( 5553.25, 3747.56 )
 rotation = -1.59089
 scale = Vector2( 1.55341, -0.965369 )
 shape = SubResource( 4 )
@@ -1016,7 +1032,7 @@ scale = Vector2( 1.32241, 1.0829 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 1206.42, 1803.29 )
+position = Vector2( 1206.42, 1748.74 )
 rotation = 1.5708
 scale = Vector2( 1.32241, 1.0829 )
 shape = SubResource( 4 )
@@ -1052,7 +1068,7 @@ scale = Vector2( 5.89642, 1.48896 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 4864.5, 1353.59 )
+position = Vector2( 4870, 1303 )
 rotation = -0.017602
 scale = Vector2( 1.48162, 1.53492 )
 shape = SubResource( 4 )
@@ -1064,7 +1080,7 @@ scale = Vector2( 3.24416, 1.53492 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 5564.13, 2551.03 )
+position = Vector2( 5564, 2574 )
 rotation = -0.017602
 scale = Vector2( 3.24416, 1.53492 )
 shape = SubResource( 4 )
@@ -1076,22 +1092,34 @@ scale = Vector2( 2.1528, 1.22798 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 2779.08, 1689.95 )
+position = Vector2( 2775, 1689.96 )
 rotation = -0.00212649
 scale = Vector2( 2.87719, 1.50218 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 2779.08, 3358.29 )
+position = Vector2( 2815.52, 3358.19 )
 rotation = -0.00274543
 scale = Vector2( 2.84141, 1.53492 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
-position = Vector2( 1231.82, 3263.7 )
+position = Vector2( 1232, 3388.5 )
 rotation = 1.5708
 scale = Vector2( 1.32241, 1.0829 )
 shape = SubResource( 4 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 3759.75, 1718.75 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 10027, 4335 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="paredes/StaticBody2D4"]
+position = Vector2( 6638, 862 )
+shape = SubResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -898.727, 2639.82 )
@@ -1108,16 +1136,31 @@ position = Vector2( -1090.69, 641.735 )
 position = Vector2( -1046.24, 2356.13 )
 
 [node name="grass4" parent="." instance=ExtResource( 4 )]
-position = Vector2( -766.859, 2330.73 )
+position = Vector2( -208, 2407 )
 
 [node name="grass2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1854, 2903 )
+position = Vector2( -913, 2953 )
+
+[node name="Enemy" parent="grass2" instance=ExtResource( 11 )]
+position = Vector2( 2476, -1505 )
+
+[node name="Enemy2" parent="grass2" instance=ExtResource( 11 )]
+position = Vector2( 3766.64, -369.913 )
+
+[node name="Enemy3" parent="grass2" instance=ExtResource( 11 )]
+position = Vector2( 4344, -1510 )
+
+[node name="Enemy4" parent="grass2" instance=ExtResource( 11 )]
+position = Vector2( 2341.64, 728.087 )
+
+[node name="Enemy Disparador" parent="grass2" instance=ExtResource( 2 )]
+position = Vector2( 3538, -1570 )
 
 [node name="grass3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1600, 2720 )
+position = Vector2( -548, 2704 )
 
 [node name="Enemy Disparador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1479, 2531 )
+position = Vector2( 278, 2591 )
 
 [node name="puerta" parent="." instance=ExtResource( 8 )]
 position = Vector2( -1054, 2567 )
@@ -1162,7 +1205,7 @@ position = Vector2( 4651.7, 1130.79 )
 position = Vector2( 784.786, 1949.89 )
 
 [node name="mushroom_big3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4899.33, 3734.12 )
+position = Vector2( 4942, 4056 )
 
 [node name="grass11" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3293.32, 2217.79 )
@@ -1200,6 +1243,12 @@ position = Vector2( 9029.14, -514.318 )
 [node name="mushroom_big4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 7128.33, 3149.96 )
 
+[node name="mushroom_big5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9832, 4159 )
+
+[node name="mushroom_big6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9670, 722 )
+
 [node name="grass24" parent="." instance=ExtResource( 4 )]
 position = Vector2( 8451.33, -82.5449 )
 
@@ -1225,13 +1274,82 @@ position = Vector2( 4795.16, 2424.52 )
 position = Vector2( 2503.64, -166.148 )
 
 [node name="mushroom_small" parent="grass28" instance=ExtResource( 3 )]
-position = Vector2( -2188.29, 735.293 )
+position = Vector2( 4909.84, -599.52 )
+
+[node name="mushroom_small6" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 4925.84, 456.48 )
+
+[node name="mushroom_small7" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 5589.84, 600.48 )
+
+[node name="mushroom_small15" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 4383.84, 2314.48 )
+
+[node name="mushroom_small16" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 3710.84, 2263.48 )
+
+[node name="mushroom_small17" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 2377.84, 2415.48 )
+
+[node name="mushroom_small18" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 1501.84, 2301.48 )
+
+[node name="mushroom_small19" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 460.84, 2034.48 )
+
+[node name="mushroom_small20" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( -644.16, 1996.48 )
+
+[node name="mushroom_small21" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( -2231.16, -1648.52 )
+
+[node name="mushroom_small23" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( -3780.16, 1462.48 )
+
+[node name="mushroom_small22" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( -2752.16, 2009.48 )
+
+[node name="mushroom_small8" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 5726.84, 230.48 )
+
+[node name="mushroom_small9" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 5461.84, -535.52 )
+
+[node name="mushroom_small10" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 5405.84, -1359.52 )
+
+[node name="mushroom_small11" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 4455.84, -2479.52 )
+
+[node name="mushroom_small12" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 3290.84, -2603.52 )
+
+[node name="mushroom_small13" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 2238.84, -2648.52 )
+
+[node name="mushroom_small14" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 1763.84, -2591.52 )
+
+[node name="mushroom_small4" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 3069.84, -895.52 )
+
+[node name="mushroom_small5" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 3069.84, -895.52 )
+
+[node name="mushroom_small2" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 2076.84, 757.48 )
+
+[node name="mushroom_small3" parent="grass28" instance=ExtResource( 3 )]
+position = Vector2( 2076.84, 757.48 )
 
 [node name="grass29" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4795.16, 2424.52 )
 
 [node name="flower" parent="grass29" instance=ExtResource( 9 )]
 position = Vector2( 2503.64, -166.148 )
+
+[node name="flower2" parent="grass29" instance=ExtResource( 9 )]
+position = Vector2( 3141.84, 338.48 )
 
 [node name="mushroom_small" parent="grass29" instance=ExtResource( 3 )]
 position = Vector2( -2497.74, -408.326 )
@@ -1249,7 +1367,55 @@ position = Vector2( -1179.21, -408.326 )
 position = Vector2( -914.894, 2488.05 )
 
 [node name="grass2" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
-position = Vector2( 1076.35, 2057.51 )
+position = Vector2( 975.05, 2387.81 )
+
+[node name="grass10" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 3327.05, 2003.81 )
+
+[node name="grass11" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 4371.05, 1507.81 )
+
+[node name="grass12" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 1441.05, 1080.81 )
+
+[node name="grass14" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 5681.05, 2097.81 )
+
+[node name="grass25" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 6831.05, 2501.81 )
+
+[node name="grass15" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 5604.05, 1387.81 )
+
+[node name="grass16" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 1314.05, -240.194 )
+
+[node name="grass17" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 4803.05, 324.806 )
+
+[node name="grass18" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 5845.05, -470.194 )
+
+[node name="grass19" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 7595.05, -213.194 )
+
+[node name="grass20" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 5711.05, -1243.19 )
+
+[node name="grass21" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 4702.05, -550.194 )
+
+[node name="grass22" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 3706.05, -1338.19 )
+
+[node name="grass23" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 2771.05, -1412.19 )
+
+[node name="grass24" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 2172.05, -672.194 )
+
+[node name="grass13" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
+position = Vector2( 4992.05, 1945.81 )
 
 [node name="grass3" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
 position = Vector2( 3013.77, 3026.22 )
@@ -1270,4 +1436,79 @@ position = Vector2( 7372.98, 523.716 )
 position = Vector2( 6713.72, -579.54 )
 
 [node name="grass9" parent="grass29/mushroom_small3" instance=ExtResource( 4 )]
-position = Vector2( 6875.17, 523.716 )
+position = Vector2( 7181.05, 500.806 )
+
+[node name="puerta2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 336, 1756 )
+next_scene_path = "res://scenes/levels/Victory.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Enemy" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2696, 3785 )
+
+[node name="Enemy" parent="Enemy" instance=ExtResource( 11 )]
+position = Vector2( 1066, 64.0001 )
+
+[node name="Enemy Disparador2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4149, 1984 )
+
+[node name="Enemy Disparador" parent="Enemy Disparador2" instance=ExtResource( 2 )]
+position = Vector2( 2, 964 )
+
+[node name="Enemy" parent="Enemy Disparador2/Enemy Disparador" instance=ExtResource( 11 )]
+position = Vector2( 2012.64, 120.087 )
+
+[node name="Enemy Disparador" parent="Enemy Disparador2/Enemy Disparador" instance=ExtResource( 2 )]
+position = Vector2( 1966, 934 )
+
+[node name="Enemy2" parent="Enemy Disparador2/Enemy Disparador" instance=ExtResource( 11 )]
+position = Vector2( 2434.64, 1108.09 )
+
+[node name="Enemy3" parent="Enemy Disparador2/Enemy Disparador" instance=ExtResource( 11 )]
+position = Vector2( 1752.64, -1244.91 )
+
+[node name="Enemy Disparador2" parent="Enemy Disparador2/Enemy Disparador" instance=ExtResource( 2 )]
+position = Vector2( 1927, -2139 )
+
+[node name="Enemy4" parent="Enemy Disparador2/Enemy Disparador" instance=ExtResource( 11 )]
+position = Vector2( 2730, -2411 )
+
+[node name="Enemy" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 11 )]
+position = Vector2( 922.638, 37.087 )
+
+[node name="Enemy Disparador" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 2 )]
+position = Vector2( 1415, 315 )
+
+[node name="Enemy2" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 11 )]
+position = Vector2( 1377.64, 1523.09 )
+
+[node name="Enemy Disparador2" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 2 )]
+position = Vector2( 1991, 1346 )
+
+[node name="Enemy Disparador3" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 2 )]
+position = Vector2( 1818, 2430 )
+
+[node name="Enemy3" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 11 )]
+position = Vector2( 2216.64, 2206.09 )
+
+[node name="Enemy4" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 11 )]
+position = Vector2( 2312.64, 792.087 )
+
+[node name="Enemy5" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 11 )]
+position = Vector2( 742.638, 3549.09 )
+
+[node name="Enemy Disparador4" parent="Enemy Disparador2/Enemy Disparador/Enemy4" instance=ExtResource( 2 )]
+position = Vector2( 1760, 3387 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 110, -5 )
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -649, 2390 )
+shape = SubResource( 6 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

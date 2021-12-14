@@ -27,7 +27,7 @@
 extents = Vector2( 70.2834, 110.451 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 318.349, 10 )
+extents = Vector2( 318.349, 62.4425 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 496.912, 342.711 )
@@ -235,9 +235,13 @@ extents = Vector2( 57, 53 )
 [node name="Outside" type="Node"]
 
 [node name="puerta" parent="." instance=ExtResource( 16 )]
+visible = true
 position = Vector2( 3603.61, 1372.85 )
 scale = Vector2( 0.600001, 0.600001 )
 next_scene_path = "res://scenes/levels/DungeonFinal.tscn"
+
+[node name="Sprite" parent="puerta" index="0"]
+visible = false
 
 [node name="staticbody" type="StaticBody2D" parent="puerta"]
 position = Vector2( -6411.49, -2537.56 )
@@ -314,7 +318,8 @@ rotation = -0.0114258
 scale = Vector2( 0.964766, 0.929766 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piedra puerta"]
-position = Vector2( -144.299, 21.2871 )
+position = Vector2( -144.299, -31.1553 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Piedra puerta"]
@@ -632,7 +637,7 @@ position = Vector2( 3054.12, 406.509 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
 [node name="house_outside" type="Position2D" parent="level/house" groups=["spawnpoints"]]
-position = Vector2( -2.12201, 173.199 )
+position = Vector2( -211.144, 115.846 )
 
 [node name="flower" parent="level" instance=ExtResource( 7 )]
 position = Vector2( -595.056, 345.159 )
@@ -659,7 +664,7 @@ position = Vector2( 1261.94, 377.811 )
 position = Vector2( 3309.16, 618.711 )
 
 [node name="grass2" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2832.8, 498.898 )
+position = Vector2( 2741.98, 495.355 )
 
 [node name="grass3" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 3305.85, 482.106 )
@@ -668,7 +673,7 @@ position = Vector2( 3305.85, 482.106 )
 position = Vector2( 1844.14, 1598.78 )
 
 [node name="grass6" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2825.28, 615.975 )
+position = Vector2( 2727.98, 636.355 )
 
 [node name="grass7" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 845.966, 1415.13 )
