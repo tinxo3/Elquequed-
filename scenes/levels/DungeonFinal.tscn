@@ -161,6 +161,9 @@ position = Vector2( 1217.39, 3607 )
 rotation = -1.58127
 texture = ExtResource( 7 )
 
+[node name="Enemy Disparador" parent="paredes" instance=ExtResource( 2 )]
+position = Vector2( -83, 2502 )
+
 [node name="puddle_small24" type="Sprite" parent="paredes"]
 position = Vector2( 1401.53, 3873.68 )
 rotation = 3.14159
@@ -1108,13 +1111,13 @@ position = Vector2( -1046.24, 2356.13 )
 position = Vector2( -766.859, 2330.73 )
 
 [node name="grass2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -718, 2921 )
+position = Vector2( -1854, 2903 )
 
 [node name="grass3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -495, 2918 )
+position = Vector2( -1600, 2720 )
 
 [node name="Enemy Disparador" parent="." instance=ExtResource( 2 )]
-position = Vector2( -138, 2545 )
+position = Vector2( 1479, 2531 )
 
 [node name="puerta" parent="." instance=ExtResource( 8 )]
 position = Vector2( -1054, 2567 )

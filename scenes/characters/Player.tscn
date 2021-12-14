@@ -5,7 +5,8 @@
 [ext_resource path="res://scenes/characters/debug_character.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 35.8589
+radius = 36.9445
+height = 100.427
 
 [sub_resource type="Animation" id=2]
 resource_name = "die"
@@ -843,8 +844,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=18]
-radius = 53.1112
-height = 67.6021
+radius = 38.0
+height = 100.0
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 585.638, 309.087 )
@@ -860,11 +861,12 @@ vframes = 4
 frame = 12
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-position = Vector2( -0.882385, -27.9806 )
-rotation = 1.5708
+position = Vector2( -0.638, -66.087 )
+rotation = 0.020944
 shape = SubResource( 1 )
 
 [node name="player_sword" type="Area2D" parent="."]
+visible = false
 position = Vector2( 6.30249, -86.9744 )
 collision_layer = 32
 monitorable = false
@@ -909,7 +911,7 @@ __meta__ = {
 }
 
 [node name="col" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2( 0, -78.0211 )
+position = Vector2( -0.638, -62.588 )
 shape = SubResource( 18 )
 __meta__ = {
 "_editor_description_": ""
