@@ -26,10 +26,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 70.2834, 110.451 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 318.349, 10 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 496.912, 342.711 )
 
 [sub_resource type="Animation" id=4]
@@ -102,10 +102,10 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 2771, 26.7571 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
@@ -113,7 +113,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=8]
 resource_name = "Caja hp 0"
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
@@ -128,7 +128,7 @@ tracks/0/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=9]
 resource_name = "Caja hp 10"
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
@@ -143,7 +143,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=10]
 resource_name = "Caja hp 4"
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
@@ -158,7 +158,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=11]
 resource_name = "Caja hp 7"
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
@@ -173,7 +173,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=12]
 resource_name = "Destroy"
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
@@ -226,10 +226,10 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 43, 39 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 57, 53 )
 
 [node name="Outside" type="Node"]
@@ -306,7 +306,6 @@ texture = ExtResource( 11 )
 
 [node name="puddle_small46" type="Sprite" parent="pared puerta"]
 position = Vector2( -265.932, -3.15283 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 11 )
 
 [node name="Piedra puerta" type="StaticBody2D" parent="."]
@@ -316,11 +315,11 @@ scale = Vector2( 0.964766, 0.929766 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piedra puerta"]
 position = Vector2( -144.299, 21.2871 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Piedra puerta"]
 position = Vector2( -143.96, 661.408 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="piedraabre" type="StaticBody2D" parent="."]
 position = Vector2( 3145.93, 1240.18 )
@@ -329,11 +328,10 @@ scale = Vector2( 0.964766, 0.929766 )
 script = ExtResource( 19 )
 
 [node name="Area2D" type="Area2D" parent="piedraabre"]
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piedraabre/Area2D"]
 position = Vector2( -151.485, 1.10938 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="animacion" type="AnimationPlayer" parent="piedraabre"]
 autoplay = "reset"
@@ -349,7 +347,7 @@ texture = ExtResource( 10 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piedraabre"]
 position = Vector2( -144.299, 21.2871 )
 scale = Vector2( 0.987183, -1.43888 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="puddle_small8" type="Sprite" parent="."]
 position = Vector2( 2446.31, -53.1263 )
@@ -579,7 +577,7 @@ pending_text = "Y? Ya se fueron todos?"
 delivered_text = "Gracias por hacerme la gauchada, toma, pero tengo otra cosa para pedirte"
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
-position = Vector2( 2406.75, 628.792 )
+position = Vector2( -802.211, 1018.57 )
 
 [node name="cartoon-image-of-wine-bottle-vector-15676017" type="Sprite" parent="level"]
 position = Vector2( -491.732, 1108.11 )
@@ -836,14 +834,14 @@ position = Vector2( -413.254, 594.683 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1593.91, -591.308 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2( 470.902, 3054.14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 1210.89, 13.4543 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="Caja" type="Node2D" parent="."]
 position = Vector2( -314.818, 577.224 )
@@ -857,16 +855,16 @@ script = ExtResource( 22 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Caja/Areacaja"]
 position = Vector2( 3.62604, -1.34799 )
 scale = Vector2( 0.996658, 0.929538 )
-frames = SubResource( 10 )
+frames = SubResource( 7 )
 animation = "Caja"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Caja/Areacaja"]
 autoplay = "Caja hp 10"
-"anims/Caja hp 0" = SubResource( 11 )
-"anims/Caja hp 10" = SubResource( 12 )
-"anims/Caja hp 4" = SubResource( 13 )
-"anims/Caja hp 7" = SubResource( 14 )
-anims/Destroy = SubResource( 15 )
+"anims/Caja hp 0" = SubResource( 8 )
+"anims/Caja hp 10" = SubResource( 9 )
+"anims/Caja hp 4" = SubResource( 10 )
+"anims/Caja hp 7" = SubResource( 11 )
+anims/Destroy = SubResource( 12 )
 
 [node name="item_spawner" type="Position2D" parent="Caja/Areacaja"]
 visible = false
@@ -875,13 +873,13 @@ script = ExtResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caja/Areacaja"]
 position = Vector2( -7, -4 )
-shape = SubResource( 9 )
+shape = SubResource( 13 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Caja"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caja/StaticBody2D"]
 position = Vector2( -8, -4 )
-shape = SubResource( 8 )
+shape = SubResource( 14 )
 
 [node name="Caja3" type="Node2D" parent="."]
 position = Vector2( -149.834, 462.562 )
@@ -895,31 +893,32 @@ script = ExtResource( 22 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Caja3/Areacaja"]
 position = Vector2( 3.62604, -1.34799 )
 scale = Vector2( 0.996658, 0.929538 )
-frames = SubResource( 10 )
+frames = SubResource( 7 )
 animation = "Caja"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Caja3/Areacaja"]
 autoplay = "Caja hp 10"
-"anims/Caja hp 0" = SubResource( 11 )
-"anims/Caja hp 10" = SubResource( 12 )
-"anims/Caja hp 4" = SubResource( 13 )
-"anims/Caja hp 7" = SubResource( 14 )
-anims/Destroy = SubResource( 15 )
+"anims/Caja hp 0" = SubResource( 8 )
+"anims/Caja hp 10" = SubResource( 9 )
+"anims/Caja hp 4" = SubResource( 10 )
+"anims/Caja hp 7" = SubResource( 11 )
+anims/Destroy = SubResource( 12 )
 
 [node name="item_spawner" type="Position2D" parent="Caja3/Areacaja"]
 visible = false
 position = Vector2( -2, -4 )
 script = ExtResource( 24 )
+item_type = "basura"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caja3/Areacaja"]
 position = Vector2( -7, -4 )
-shape = SubResource( 9 )
+shape = SubResource( 13 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Caja3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caja3/StaticBody2D"]
 position = Vector2( -8, -4 )
-shape = SubResource( 8 )
+shape = SubResource( 14 )
 
 [node name="Caja4" type="Node2D" parent="."]
 position = Vector2( -457.538, 460.674 )
@@ -933,31 +932,32 @@ script = ExtResource( 22 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Caja4/Areacaja"]
 position = Vector2( 3.62604, -1.34799 )
 scale = Vector2( 0.996658, 0.929538 )
-frames = SubResource( 10 )
+frames = SubResource( 7 )
 animation = "Caja"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Caja4/Areacaja"]
 autoplay = "Caja hp 10"
-"anims/Caja hp 0" = SubResource( 11 )
-"anims/Caja hp 10" = SubResource( 12 )
-"anims/Caja hp 4" = SubResource( 13 )
-"anims/Caja hp 7" = SubResource( 14 )
-anims/Destroy = SubResource( 15 )
+"anims/Caja hp 0" = SubResource( 8 )
+"anims/Caja hp 10" = SubResource( 9 )
+"anims/Caja hp 4" = SubResource( 10 )
+"anims/Caja hp 7" = SubResource( 11 )
+anims/Destroy = SubResource( 12 )
 
 [node name="item_spawner" type="Position2D" parent="Caja4/Areacaja"]
 visible = false
 position = Vector2( -2, -4 )
 script = ExtResource( 24 )
+item_type = "basura"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caja4/Areacaja"]
 position = Vector2( -7, -4 )
-shape = SubResource( 9 )
+shape = SubResource( 13 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Caja4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caja4/StaticBody2D"]
 position = Vector2( -8, -4 )
-shape = SubResource( 8 )
+shape = SubResource( 14 )
 
 [connection signal="body_entered" from="puerta" to="puerta" method="_on_puerta_body_entered"]
 [connection signal="body_entered" from="piedraabre/Area2D" to="piedraabre" method="_on_Area2D_body_entered"]
