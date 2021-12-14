@@ -26,7 +26,16 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	player = null
 
+func fire():
+	var bullet = BULLET_SCENE.instance()
+	bullet.position = get_global_position()
+	bullet.player = player
+	get_parent().add_child(bullet)
+	$Timer.set_wait_time(1)
 
+func _on_Timer_timeout():
+	if player !=null:
+		fire()
 #func fire():
 #	var bullet = BULLET_SCENE.instance()
 #	bullet.position = get_global_position()
@@ -47,4 +56,8 @@ func _on_hurtbox_area_entered(area):
 		var pushback_direction = (global_position - area.global_position).normalized()
 		move_and_slide( pushback_direction * 5000)
 		
+	pass # Replace with function body.
+
+
+
 	pass # Replace with function body.

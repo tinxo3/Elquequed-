@@ -16,3 +16,12 @@ func _physics_process(delta):
 	move = move.move_toward(look_vec, delta)
 	move = move.normalized() * speed
 	position += move
+
+
+
+
+
+func _on_Bullet_body_entered(body):
+	if body.is_in_group("player"):
+		 queue_free()
+	pass # Replace with function body.

@@ -239,9 +239,6 @@ position = Vector2( 3603.61, 1372.85 )
 scale = Vector2( 0.600001, 0.600001 )
 next_scene_path = "res://scenes/levels/DungeonFinal.tscn"
 
-[node name="Sprite" parent="puerta" index="0"]
-visible = false
-
 [node name="staticbody" type="StaticBody2D" parent="puerta"]
 position = Vector2( -6411.49, -2537.56 )
 scale = Vector2( 1.66666, 1.66666 )
@@ -634,9 +631,7 @@ texture = ExtResource( 12 )
 position = Vector2( 3054.12, 406.509 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
-[node name="house_outside" type="Position2D" parent="level/house" groups=[
-"spawnpoints",
-]]
+[node name="house_outside" type="Position2D" parent="level/house" groups=["spawnpoints"]]
 position = Vector2( -2.12201, 173.199 )
 
 [node name="flower" parent="level" instance=ExtResource( 7 )]
