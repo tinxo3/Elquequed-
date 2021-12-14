@@ -51,10 +51,12 @@ func _on_Timer_timeout():
 func _on_hurtbox_area_entered(area):
 	if area.name == "player_sword":
 		hp -= 1
-		if(hp <= 0):
-			queue_free()
+	
 		var pushback_direction = (global_position - area.global_position).normalized()
 		move_and_slide( pushback_direction * 5000)
+		get_node("anims").play("hurt")
+		if(hp <= 0):
+			get_node("anims").play("die")
 		
 	pass # Replace with function body.
 

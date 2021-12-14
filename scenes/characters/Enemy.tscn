@@ -1164,12 +1164,12 @@ position = Vector2( 585.638, 309.087 )
 script = ExtResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 6.30249, -86.9744 )
 texture = ExtResource( 2 )
+flip_h = true
 hframes = 8
 vframes = 4
-frame = 3
+frame = 9
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 position = Vector2( -0.882385, -27.9806 )
@@ -1199,9 +1199,8 @@ anims/walk_up = SubResource( 17 )
 position = Vector2( 0, -78.0211 )
 
 [node name="slash" type="CollisionPolygon2D" parent="enemy_sword"]
-position = Vector2( 31, -43 )
-rotation = -0.690684
 polygon = PoolVector2Array( -134.513, -92.9393, -124.246, 19.4555, -59.4026, 109.155, 76.2278, 112.938, 75.147, 26.4802, -2.66479, 20.5363, -36.1671, -8.64319, -57.2411, -40.5244 )
+disabled = true
 
 [node name="state_changer" type="Timer" parent="."]
 autostart = true
