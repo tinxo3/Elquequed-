@@ -1114,7 +1114,7 @@ position = Vector2( -718, 2921 )
 position = Vector2( -495, 2918 )
 
 [node name="Enemy Disparador" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1438, 1424 )
+position = Vector2( -138, 2545 )
 
 [node name="puerta" parent="." instance=ExtResource( 8 )]
 position = Vector2( -1054, 2567 )
@@ -1151,7 +1151,6 @@ position = Vector2( 784.786, 1949.89 )
 [node name="mushroom_small2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5261.26, 1187.93 )
 rotation = 0.336242
-scale = Vector2( 1, 1 )
 
 [node name="mushroom_small4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4651.7, 1130.79 )

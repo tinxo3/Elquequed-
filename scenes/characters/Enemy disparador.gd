@@ -5,6 +5,7 @@ onready var BULLET_SCENE = preload("res://scenes/levels/Bullet.tscn")
 var player = null
 var move = Vector2.ZERO
 var speed = 1
+export (int) var hp 
 
 func _physics_process(delta):
 	move = Vector2.ZERO
@@ -38,7 +39,12 @@ func _on_Area2D_body_exited(body):
 #		fire()
 
 
-
-
-
-
+func _on_hurtbox_area_entered(area):
+	if area.name == "player_sword":
+		hp -= 1
+		if(hp <= 0):
+			queue_free()
+		var pushback_direction = (global_position - area.global_position).normalized()
+		move_and_slide( pushback_direction * 5000)
+		
+	pass # Replace with function body.
